@@ -1,0 +1,31 @@
+// заполнители
+%flexRowNowrapSB {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+%bgBlur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+%marginWrapDesktopLR {
+  margin: 0 64px;
+  @include desktop(1600) {
+    margin: 0 27px;
+  }
+  @include desktop(1400) {
+    margin: 0 20px;
+  }
+  @include mobile {
+    margin: 34px;
+  }
+}
+%paddingSectionFullWidthLR {
+  padding: 9px;
+
+  @include mobile {
+    padding: 5px;
+  }
+}
