@@ -170,13 +170,16 @@ get_header();
                 </button>
               </div>
               <div class="right_col">
-                <button class="btn_hs transporent down">
-                  <p>Листайте вниз</p>
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_down_w.svg"
-                    alt="arrow in circle"
-                  />
-                </button>
+				<a href="#about">
+
+					<button class="btn_hs transporent down">
+					  <p>Листайте вниз</p>
+					  <img
+						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_down_w.svg"
+						alt="arrow in circle"
+					  />
+					</button>
+				</a>
               </div>
             </div>
           </div>

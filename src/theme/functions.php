@@ -204,11 +204,11 @@ function handle_custom_contact_form_ajax() {
 
     $number = sanitize_text_field($_POST['phone_e164']);
 
-    // $to = get_option('admin_email');
-    $to = 'Leshiy_POS@mail.ru';
+    $to = get_option('admin_email');
+	$from = defined('SMTP_USER') ? constant('SMTP_USER') : 'info@4tech.kz';
     $subject = 'A message has been sent from your 4Tech website.';
     $message = "Number: $number \n ------- \nThis message was received from the 4TECH website";
-    $headers = array('From: '. get_bloginfo('name') .' <'. $to .'>'); //Заголовок должен содержать адрес почты, зарегестрированный в SMTP
+    $headers = array('From: '. get_bloginfo('name') .' <'. $from .'>'); //Заголовок должен содержать адрес почты, зарегестрированный в SMTP
 
     $sent = wp_mail($to, $subject, $message, $headers);
 
@@ -232,11 +232,11 @@ function handle_custom_contact_form_popup_ajax() {
     $number = sanitize_text_field($_POST['phone_e164']);
     $name = sanitize_text_field($_POST['your_name']);
 
-    // $to = get_option('admin_email');
-    $to = 'Leshiy_POS@mail.ru';
+    $to = get_option('admin_email');
+	$from = defined('SMTP_USER') ? constant('SMTP_USER') : 'info@4tech.kz';
     $subject = 'A message has been sent from your 4Tech website.';
     $message = "Name: $name\nNumber: $number \n ------- \nThis message was received from the 4TECH website";
-    $headers = array('From: '. get_bloginfo('name') .' <'. $to .'>'); //Заголовок должен содержать адрес почты, зарегестрированный в SMTP
+    $headers = array('From: '. get_bloginfo('name') .' <'. $from .'>'); //Заголовок должен содержать адрес почты, зарегестрированный в SMTP
 
     $sent = wp_mail($to, $subject, $message, $headers);
 
@@ -257,12 +257,13 @@ add_action('phpmailer_init', function ($m) {
     $port = defined('SMTP_PORT') ? (int) constant('SMTP_PORT') : 587;
     $user = defined('SMTP_USER') ? constant('SMTP_USER') : '';
     $pass = defined('SMTP_PASS') ? constant('SMTP_PASS') : '';
+    $secure = defined('SMTP_SECURE') ? constant('SMTP_SECURE') : 'tls';
 
 
   $m->isSMTP();
   $m->Host = $host;
   $m->Port = $port;           // или 465 + 'ssl'
-  $m->SMTPSecure = 'tls';
+  $m->SMTPSecure = $secure;
   $m->SMTPAuth = true;
   $m->Username = $user;
   $m->Password = $pass; // пароль приложения
