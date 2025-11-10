@@ -11,11 +11,25 @@
 
           <div class="col menu_footer fade_in">
             <ul>
-              <li><a href="#about">О нас</a></li>
-              <li><a href="#partners">Партнеты</a></li>
-              <li><a href="#services">Услуги</a></li>
-              <li><a href="#equipment">Оборудование</a></li>
-              <li><a href="#contacts">Контакты</a></li>
+				<?php 
+					if (is_page_template( 'template-equipment.php' )){
+				?>
+					<li><a href="/">Решения</a></li>
+					<li><a href="/">Оргтехника</a></li>
+					<li><a href="/">Лицензионное ПО</a></li>
+					<li><a href="/">Оборудование</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+				<?php
+					} else {
+				?>
+					<li><a href="#about">О нас</a></li>
+					<li><a href="#partners">Партнеты</a></li>
+					<li><a href="#services">Услуги</a></li>
+					<li><a href="#equipment">Оборудование</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+				<?php
+					}
+				?>
             </ul>
           </div>
           <div class="col buttons_inner fade_in">
@@ -39,10 +53,23 @@
         </div>
         <div class="mobile_menu">
           <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#partners">Партнеты</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#equipment">Оборудование</a></li>
+				<?php 
+					if (is_page_template( 'template-equipment.php' )){
+				?>
+					<li><a href="/">Решения</a></li>
+					<li><a href="/">Оргтехника</a></li>
+					<li><a href="/">ПО</a></li>
+					<li><a href="/">Оборудование</a></li>
+				<?php
+					} else {
+				?>
+					<li><a href="#about">О нас</a></li>
+					<li><a href="#partners">Партнеты</a></li>
+					<li><a href="#services">Услуги</a></li>
+					<li><a href="#equipment">Оборудование</a></li>
+				<?php
+					}
+				?>
           </ul>
         </div>
         <div class="foot_footer two_col">

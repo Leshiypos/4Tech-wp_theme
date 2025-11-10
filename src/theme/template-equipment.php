@@ -24,37 +24,19 @@ get_header();
           <div></div>
           <ul class="burger__list">
             <li class="burger__list-link">
-              <a href="#about" data-link-burger>О нас</a>
+              <a href="/" data-link-burger>Главная</a>
             </li>
             <li class="burger__list-link">
-              <a href="#services" data-link-burger>Услуги</a>
+              <a href="#" data-link-burger>Комплексные решения</a>
             </li>
             <li class="burger__list-link">
-              <a href="#soft" data-link-burger>Софт</a>
+              <a href="#" data-link-burger>Оргтехника</a>
             </li>
             <li class="burger__list-link">
-              <a href="#equipment" data-link-burger>Оборудование</a>
+              <a href="#" data-link-burger>Лицензионное ПО</a>
             </li>
             <li class="burger__list-link">
-              <a href="#protect" data-link-burger>Кибербезопасность</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#outsourcing" data-link-burger>Аутсорсинг</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#solution" data-link-burger>Этапы</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#development" data-link-burger>Разработка</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#partners" data-link-burger>Партнеры</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#solutions" data-link-burger>Решения</a>
-            </li>
-            <li class="burger__list-link">
-              <a href="#contacts" data-link-burger>Контакты</a>
+              <a href="#" data-link-burger>Cетевое оборудование</a>
             </li>
           </ul>
 
@@ -81,17 +63,12 @@ get_header();
             /></a>
             <nav>
               <ul class="main_menu">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#soft">Софт</a></li>
-                <li><a href="#equipment">Оборудование</a></li>
-                <li><a href="#protect">Кибербезопасность</a></li>
-                <li><a href="#outsourcing">Аутсорсинг</a></li>
-                <li><a href="#solution">Этапы</a></li>
-                <li><a href="#development">Разработка</a></li>
-                <li><a href="#partners">Партнеры</a></li>
-                <li><a href="#solutions">Решения</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="#">Комплексные решения</a></li>
+                <li><a href="#">Оргтехника</a></li>
+                <li><a href="#">Лицензионное ПО</a></li>
+                <li><a href="#">Cетевое оборудование</a></li>
+   
               </ul>
             </nav>
             <div class="wrap_btns">
