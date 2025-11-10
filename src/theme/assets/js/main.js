@@ -28,6 +28,27 @@ function sendForm(formId, errorId, action_name) {
   }
 }
 
+// FAQ
+
+function faqInit() {
+  const closeAllQuestion = (elements) => {
+    if (!elements.length) return;
+    elements.forEach((element) => {
+      element.classList.remove("active");
+    });
+  };
+  document.addEventListener("click", (e) => {
+    let target = e.target;
+    let singleQuest = target.closest(".single_question");
+    if (!singleQuest) return;
+    let allActiveQuest = target
+      .closest(".questions_section")
+      .querySelectorAll(".single_question.active");
+    singleQuest.classList.toggle("active");
+    closeAllQuestion(allActiveQuest);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // preloader
 
@@ -344,6 +365,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   bergerMenuControl();
+
+  //   FAQ
+  faqInit();
 });
 
 // отложенный загрузка  видер

@@ -116,9 +116,12 @@ get_header();
       </header>
 
       <!-- Секция HEro section -->
+	   <?php 
+	   	$hero = get_field("hero_section");
+	   ?>
       <section id="begin" class="hero_section">
         <div class="wrap_section">
-		  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header_org_equimment.webp" class="video_background" alt="">
+		  <img src="<?php echo $hero["img_url"]; ?>" class="video_background" alt="Изображение">
 
           <div class="wrap_content">
             <div class="head_content">
@@ -128,15 +131,15 @@ get_header();
                   alt="check_mark"
                 />
                 <span
-                  >Принтеры, МФУ, сканеры и расходные материалы</span
+                  ><?php echo $hero['description'] ? $hero['description'] : "Описание не установлено"; ?></span
                 >
               </div>
             </div>
             <h1>
-              Оргтехника для вашего офиса с гарантией и сервисом
+              <?php echo $hero['title'] ? $hero['title'] : "Заголовок не установлен"; ?>
             </h1>
             <div class="pre_title_mob">
-              От оборудования до облачных серверов
+              <?php echo $hero['description_mob'] ? $hero['description_mob'] : "Описание для мобильной версии не установлено"; ?>
             </div>
             <div class="foot_content two_col">
               <div class="left_col">
@@ -172,542 +175,22 @@ get_header();
         </div>
       </section>
 
-      <!-- Секция Комлпексное решение -->
-      <section class="solutions_second_section">
-        <div class="wrap_section">
-          <div class="head_content">
-            <div class="title">
-              <h2 class="fade_in">
-                комплексное решение
-              </h2>
-            </div>
-            <div class="description_wrap fade_in">
-              <div class="wrap">
-				<div class="video_cube">
-					<div class="block_cube">
-						<video class="video_background fade_in" poster="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.webp" muted="" loop="" playsinline="" preload="auto" data-autoplay="delay" autoplay="">
-							<!-- десктоп -->
-							<source src="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.mp4" type="video/mp4" media="(min-width: 1001px)">
-							<!-- мобильный -->
-							<source src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/cube_mini.mp4" type="video/mp4" media="(max-width: 1000px)">
-						</video>
-
-						<div class="content_logo" >
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_for_cube.png" alt="">
-						</div>
-              		</div>
-				</div>
-                <div class="description">
-      				Поломки техники, нехватка расходников, завышенные цены — мы решаем эти задачи.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main_content">
-			<div class="wrap_main_content">
-				<div class="single_solution">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sol_1.svg" alt="">
-					<div class="right_col">
-						<h5>Продажа оборудование</h5>
-						<div class="post_title">
-							Качественная офисная техника от проверенных производителей.
-						</div>
-					</div>
-				</div>
-				<div class="single_solution">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sol_2.svg" alt="">
-					<div class="right_col">
-						<h5>Аренда оборудования</h5>
-						<div class="post_title">
-							арендуйте надёжную оргтехнику с быстрой доставкой и подключением
-						</div>
-					</div>
-				</div>
-				<div class="single_solution">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sol_3.svg" alt="">
-					<div class="right_col">
-						<h5>Сервис и ремонт</h5>
-						<div class="post_title">
-							 техническая поддержка и ремонт оборудования
-						</div>
-					</div>
-				</div>
-				<div class="single_solution">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/sol_4.svg" alt="">
-					<div class="right_col">
-						<h5>Расходные материалы</h5>
-						<div class="post_title">
-							 Поставляем оригинальные расходники без скрытых доплат
-						</div>
-					</div>
-				</div>
-			</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Секция Каталог-->
-      <section class="catalog_equipment_section">
-        <div class="wrap_section">
-          
-        </div>
-      </section>
-
-      <!-- Секуия Лицинзионное ПО -->
-      <section id="soft" class="licensed_software_section">
-        <div class="wrap_section">
-          <!-- <img
-            src="<?php echo get_template_directory_uri(); ?>/assets/images/licensed_software_BG-section.webp"
-            alt="background"
-            class="cover fade_in"
-          /> -->
-          <video
-            class="video_background cover fade_in"
-            poster="<?php echo get_template_directory_uri(); ?>/assets/video/licensed_software_section_BG.webp"
-            muted=""
-            loop=""
-            playsinline=""
-            preload="none"
-            data-autoplay="delay"
-          >
-            <!-- десктоп -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/licensed_software_section_BG.mp4"
-              type="video/mp4"
-              media="(min-width: 1001px)"
-            />
-            <!-- мобильный -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/licensed_software_section_BG.mp4"
-              type="video/mp4"
-              media="(max-width: 1000px)"
-            />
-          </video>
-
-          <div class="wrap_content">
-            <div class="content_top">
-              <h2 class="fade_in">
-                Предоставляем лицензионное ПО <br />
-                для вашей компании
-              </h2>
-              <div class="description fade_in">
-                4tech является авторизированным партнером международных
-                производителей программного обеспечения
-              </div>
-              <button class="btn_hs leave_request fade_in" data-open-popup>
-                <p>Оставить заявку</p>
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
-                  alt="button"
-                />
-              </button>
-            </div>
-            <div class="content_bottom fade_in">
-              <div class="swiper our_clients_slider">
-                <div class="swiper-wrapper our_clients">
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/adobe.webp" alt="adobe" />
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                        alt="microsoft"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                        alt="team_viewer"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp" alt="esset" />
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp" alt="symantec" />
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card_client">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/kaspersky.webp"
-                        alt="kaspersky"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Секция каталога -->
-      <section id="equipment" class="catalog_section">
-        <div class="wrap_section">
-          <div class="head_content">
-            <div class="title fade_in">
-              <h2>каталог</h2>
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_title_catalog.svg"
-                alt="arrow title"
-              />
-            </div>
-            <div class="description_wrap fade_in">
-              <div class="wrap">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
-                  alt="logo-section"
-                />
-                <div class="description">
-                  Мы предоставляем нашему рынку все необходимые инструменты для
-                  оптимизаций и безопасности бизнес проектов: от IT оборудования
-                  до облачных серверов
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row_catalog">
-            <div class="card text">
-              <h3 class="fade_in">Компьютерное оборудование и ноутбуки</h3>
-              <p class="fade_in">
-                Надёжная техника для стабильной работы вашей команды
-              </p>
-            </div>
-            <div class="card parent_cl_w mobile_visible">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_1_1.webp"
-                alt="itam1"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_1_2.webp"
-                alt="itam2"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_1_3.webp"
-                alt="itam3"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_1_4.webp"
-                alt="itam4"
-                class="cover fade_in"
-              />
-            </div>
-          </div>
-
-          <div class="row_catalog">
-            <div class="card mobile_visible">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_2_1.webp"
-                alt="itam1"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_2_2.webp"
-                alt="itam2"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_2_3.webp"
-                alt="itam3"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_2_4.webp"
-                alt="itam4"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card text">
-              <h3 class="fade_in">Серверное оборудование</h3>
-              <p class="fade_in">
-                Мощные решения для бесперебойной работы вашей инфраструктуры
-              </p>
-            </div>
-          </div>
-
-          <div class="row_catalog">
-            <div class="card text">
-              <h3 class="fade_in">Системы хранения данных</h3>
-              <p class="fade_in">
-                Безопасное и масштабируемое хранения ваших данных
-              </p>
-            </div>
-            <div class="card mobile_visible">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_3_1.webp"
-                alt="itam1"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_3_2.webp"
-                alt="itam2"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_3_3.webp"
-                alt="itam3"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_3_4.webp"
-                alt="itam4"
-                class="cover fade_in"
-              />
-            </div>
-          </div>
-
-          <div class="row_catalog last">
-            <div class="card child_cl_w mobile_visible">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_4_1.webp"
-                alt="itam3"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card child_cl_w">
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/caralog_row_4_2.webp"
-                alt="itam4"
-                class="cover fade_in"
-              />
-            </div>
-            <div class="card text">
-              <h3 class="small fade_in">Телекоммуникационное оборудование</h3>
-              <p class="fade_in">
-                Обеспечиваем стабильную и высокоскоростную связь для офиса,
-                дата-центра или распределённой инфраструктуры
-              </p>
-              <button class="btn_hs leave_request fade_in" data-open-popup>
-                <p>Смотреть больше</p>
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
-                  alt="button"
-                />
-              </button>
-            </div>
-          </div>
-          <div class="mobile_btns_wrap">
-            <button
-              class="btn_hs leave_request mobile_full_width fade_in"
-              data-open-popup
-            >
-              <p>Смотреть больше</p>
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
-                alt="button"
-              />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Секция Защита бизнеса -->
-      <section id="protect" class="protect_section">
-        <div class="wrap_section">
-          <video
-            class="video_background fade_in"
-            poster="<?php echo get_template_directory_uri(); ?>/assets/video/protected_section_bg.webp"
-            muted=""
-            loop=""
-            playsinline=""
-            preload="none"
-            data-autoplay="delay"
-          >
-            <!-- десктоп -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/protected_section_bg.mp4"
-              type="video/mp4"
-              media="(min-width: 1001px)"
-            />
-            <!-- мобильный -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/protected_section_bg.mp4"
-              type="video/mp4"
-              media="(max-width: 1000px)"
-            />
-          </video>
-
-          <div class="wrap_content">
-            <h2 class="fade_in">
-              Защищаем бизнес и данные <br />
-              от цифровых угроз
-            </h2>
-            <p class="fade_in">
-              Обеспечиваем кибербезопасность на всех уровнях — от антивирусной
-              защиты рабочих станций до комплексных систем предотвращения атак и
-              утечек данных
-            </p>
-            <button
-              class="btn_hs leave_request mobile_full_width fade_in_fast"
-              data-open-popup
-            >
-              <p>Оставить заявку</p>
-              <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
-                alt="button"
-              />
-            </button>
-          </div>
-          <div class="overlay_content"></div>
-        </div>
-      </section>
-
-      <!-- Секция Аутсортинг -->
-      <section id="outsourcing" class="outsourcing_section">
-        <div class="wrap_section">
-          <div class="head_content">
-            <div class="title">
-              <h2 class="fade_in">IT аутсорсинг</h2>
-            </div>
-            <div class="description_wrap fade_in">
-              <div class="wrap">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
-                  alt="logo-section"
-                />
-                <div class="description">
-                  Берём на себя поддержку, обслуживание и администрирование —
-                  <br />
-                  чтобы вы фокусировались на бизнесе, а не на сбоях.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="main_content">
-            <div class="row_cont">
-              <div class="col">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_1_1.webp"
-                  class="from_descr fade_in"
-                  alt="outsourcing"
-                />
-                <div class="content">
-                  <div class="wrap min_width">
-                    <h3 class="fade_in">
-                      техническая <br />
-                      поддержка ПК
-                    </h3>
-                    <p class="fade_in">
-                      Обеспечиваем бесперебойную работу рабочих мест, оперативно
-                      устраняем неполадки и обновляем системы.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col img">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_1_2.webp"
-                  alt="outsourcing "
-                  class="fade_in"
-                />
-              </div>
-            </div>
-
-            <div class="row_cont">
-              <div class="col img">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_2_1.webp"
-                  alt="outsourcing "
-                  class="fade_in cover_left"
-                />
-              </div>
-              <div class="col">
-                <div class="content">
-                  <div class="wrap">
-                    <h3 class="fade_in">
-                      Тех. обслуживание <br />
-                      серверного оборудования
-                    </h3>
-                    <p class="fade_in long">
-                      Следим за стабильной работой серверов: мониторим,
-                      настраиваем и предотвращаем сбои до их возникновения.
-                    </p>
-                  </div>
-                </div>
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_2_2.webp"
-                  class="from_descr fade_in"
-                  alt="outsourcing "
-                />
-              </div>
-            </div>
-
-            <div class="row_cont">
-              <div class="col">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_3_1.webp"
-                  class="from_descr fade_in"
-                  alt="outsourcing "
-                />
-                <div class="content">
-                  <div class="wrap">
-                    <h3 class="fade_in">
-                      администрирование <br />
-                      серверных приложений
-                    </h3>
-                    <p class="fade_in long">
-                      Настраиваем, обновляем и сопровождаем системное ПО, чтобы
-                      ваши сервисы работали надёжно и без простоев.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col img">
-                <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/autsort_row_3_2.webp"
-                  class="fade_in cover_right"
-                  alt="outsourcing"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       <!-- Секция Комплексное решение  -->
+	   <?php 
+	 	$solution_section = get_field("solution_section");
+		$is_active_solution = $solution_section['is_active'] ? $solution_section['is_active'] : false;
+
+		if ($is_active_solution){
+		?>
+
       <section id="solution" class="solution_section">
         <div class="wrap_section">
           <div class="head_content">
             <div class="title">
               <h2 class="fade_in">
-                комплексное <br />
-                решение
+                комплексное решение по внедрению <br />
+                IT архитектуры в вашу компанию
               </h2>
               <div class="four_steps">
                 <video
@@ -746,11 +229,8 @@ get_header();
                   alt="logo-section"
                 />
                 <div class="description">
-                  Осуществляем решения «под ключ» для компаний. От изучения
-                  задач
-                  <br />
-                  и проблем клиента, до подбора оборудования, поставки и
-                  пусконаладки
+                  Поломки техники, нехватка расходников, завышенные цены — мы
+                  решаем эти задачи.
                 </div>
               </div>
             </div>
@@ -905,356 +385,272 @@ get_header();
           </div>
         </div>
       </section>
+	  	<?php
+		}
+	   ?>
 
-      <!-- Секция Разработка  -->
-      <section id="development" class="development_section">
+      <!-- Секция Комлпексное решение -->
+	   	   <?php 
+	 	$solutions_second_section = get_field("solutions_second_section");
+		$is_active_solution_second = $solutions_second_section['is_active'] ? $solutions_second_section['is_active'] : false;
+		
+		if ($is_active_solution_second){
+		?>
+
+      <section class="solutions_second_section">
         <div class="wrap_section">
-          <div class="cover_wrapper">
-            <img
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/development_section_BG.webp"
-              class="cover fade_in"
-              alt=""
-            />
-          </div>
+          <div class="head_content">
+            <div class="title">
+              <h2 class="fade_in"><?php echo $solutions_second_section['title'] ? $solutions_second_section['title'] : "Заголовок не установлено"; ?></h2>
+            </div>
+            <div class="description_wrap fade_in">
+              <div class="wrap">
+                <div class="video_cube">
+                  <div class="block_cube">
+                    <video
+                      class="video_background fade_in"
+                      poster="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.webp"
+                      muted=""
+                      loop=""
+                      playsinline=""
+                      preload="auto"
+                      data-autoplay="delay"
+                      autoplay=""
+                    >
+                      <!-- десктоп -->
+                      <source
+                        src="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.mp4"
+                        type="video/mp4"
+                        media="(min-width: 1001px)"
+                      />
+                      <!-- мобильный -->
+                      <source
+                        src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/cube_mini.mp4"
+                        type="video/mp4"
+                        media="(max-width: 1000px)"
+                      />
+                    </video>
 
-          <div class="wrap_content">
-            <h2 class="fade_in">
-              Разрабатываем цифровые продукты и приложения
-            </h2>
-            <div class="our_stecs">
-              <div class="row">
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>Back-end</h3>
-                    <p>PHP: Laravel, lumen, Symfony, Cake PHP, Slim</p>
+                    <div class="content_logo">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_for_cube.png" alt="" />
+                    </div>
                   </div>
                 </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>Database</h3>
-                    <p>MySQL, PostgreSQL, RethinkDB, MariaDB</p>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>Mobile</h3>
-                    <p>ReactNative, Flutter Native Mobile app</p>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>CMS</h3>
-                    <p>Wordpress, WooCommerce</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>Front-end</h3>
-                    <p>JavaScript, CSS, React/Redux, TypeScript</p>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>DevOps</h3>
-                    <p>CI/CD Pipelines, Automatic Deployment</p>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>API-интеграции</h3>
-                    <p>PHP: Laravel, Lumen, Symfony, Cake PHP, Slim</p>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>UI/UX Дизайн</h3>
-                    <p>Инструменты: Figma, Adobe XD, Sketch</p>
-                  </div>
+                <div class="description">
+                 <?php echo $solutions_second_section['description'] ? $solutions_second_section['description'] : "Описание не установлено"; ?>
                 </div>
               </div>
             </div>
           </div>
-          <div class="overlay_content"></div>
+          <div class="main_content">
+            <div class="wrap_main_content">
+			<?php 
+			$solution_repeater = $solutions_second_section["solution_repeater"];
+			if ($solutions_second_section && !empty($solution_repeater)){
+				foreach ($solution_repeater as $repeater){
+			?>
+              <div class="single_solution">
+                <img src="<?php echo $repeater["icon_url"] ? $repeater["icon_url"] : get_template_directory_uri().'/assets/images/icons/sol_1.svg'; ?>" alt="" />
+                <div class="right_col">
+                  <h5><?php echo $repeater["title_rep"]; ?></h5>
+                  <div class="post_title">
+                    <?php echo $repeater["description_rep"]; ?>
+                  </div>
+                </div>
+              </div>
+			<?php
+				}
+			}
+			?>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="partners" class="partners_cluster">
-        <!-- Секция Наши партнеры -->
-        <section class="partners_section">
-          <div class="wrap_section">
-            <h2 class="fade_in">Наши партнеры</h2>
-            <div class="main_content">
-              <div class="swiper partners_slider fade_in">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/adobe.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
+		<?php		
+		}
+		?>
+      <!-- Секция Каталог-->
+	   <?php 
+	   $catalog_section = get_field('catalog_equipment_section');
+	   $count = $catalog_section['count'] ? $catalog_section['count'] : -1;
+	   $goods_type = $catalog_section['goods_type'] ? $catalog_section['goods_type'] -> slug : "";
+	   
+	   $arg = [
+		"posts_per_page" 	=> $count,
+		"post_type" 		=> "goods",
+		"type_goods"		=> $goods_type
+	   ];
+	 	$goods_posts = get_posts($arg);
+	   ?>
+      <section class="catalog_equipment_section">
+        <div class="wrap_section">
+          <div class="head_content">
+            <h2>Каталог</h2>
+          </div>
+          <div class="main_content">
+
+			<?php 
+			foreach ($goods_posts as $post){
+			setup_postdata( $post );
+			?>
+           <!-- Карточка -->
+            <div class="card">
+              <div class="img_wrap">
+                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "goods_thumb" ) ? get_the_post_thumbnail_url( get_the_ID(), "goods_thumb" ) : get_template_directory_uri().'/assets/images/img_not_found.webp' ; ?>" alt="" />
+              </div>
+              <div class="description_wrap">
+                <div class="description">
+                  <h4><?php the_title(  ); ?></h4>
+                    <?php the_excerpt(  ); ?>
+                </div>
+              </div>
+              <div class="btn_block">
+                <button class="btn_hs white" data-open-popup="">
+                  <p>Запросить цену</p>
+                  <img
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_bl.svg"
+                    alt="arrow in circle"
+                  />
+                </button>
+              </div>
+            </div>
+
+			<?php		
+		}
+			wp_reset_postdata(  );
+			?>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция НАШИ преимущества -->
+	   <?php 
+	 	$advantages_section = get_field("advantages_section");
+	   ?>
+      <section class="solutions_second_section">
+        <div class="wrap_section">
+          <div class="head_content">
+            <div class="title">
+              <h2 class="fade_in"><?php echo $advantages_section['title'] ? $advantages_section['title'] : "Введите заголовок секции";  ?></h2>
+            </div>
+            <div class="description_wrap fade_in">
+              <div class="wrap">
+                <div class="video_cube">
+                  <div class="block_cube">
+                    <video
+                      class="video_background fade_in"
+                      poster="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.webp"
+                      muted=""
+                      loop=""
+                      playsinline=""
+                      preload="auto"
+                      data-autoplay="delay"
+                      autoplay=""
+                    >
+                      <!-- десктоп -->
+                      <source
+                        src="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.mp4"
+                        type="video/mp4"
+                        media="(min-width: 1001px)"
+                      />
+                      <!-- мобильный -->
+                      <source
+                        src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/cube_mini.mp4"
+                        type="video/mp4"
+                        media="(max-width: 1000px)"
+                      />
+                    </video>
+
+                    <div class="content_logo">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_for_cube.png" alt="" />
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/kaspersky.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                      alt=""
-                      class="partner_logo"
-                    />
-                  </div>
+                </div>
+                <div class="description">
+                 <?php echo $advantages_section['description'] ? $advantages_section['description'] : "Введите описание секции";  ?>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+          <div class="main_content">
+            <div class="wrap_main_content">
 
+			<?php 
+			$advantages_repeater = $advantages_section["advantages_repeater"];
+			if ($advantages_section && !empty($advantages_repeater)){
+				foreach ($advantages_repeater as $repeater){
+			?>
+              <div class="single_solution">
+                <img src="<?php echo $repeater["icon_url"] ? $repeater["icon_url"] : get_template_directory_uri().'/assets/images/icons/sol_1.svg'; ?>" alt="" />
+                <div class="right_col">
+                  <h5><?php echo $repeater["title_rep"]; ?></h5>
+                  <div class="post_title">
+                    <?php echo $repeater["description_rep"]; ?>
+                  </div>
+                </div>
+              </div>
+			<?php
+				}
+			}
+			?> 
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+	  <!-- Секция Наши кленты -->
+	   <?php 
+	 		$partners_section = get_field("partners_section");
+			$row_one =   $partners_section["clients_repeater_row_one"];
+			$row_two =   $partners_section["clients_repeater_row_two"];
+	   ?>
+      <section id="partners" class="partners_cluster">
         <!-- Секция Наши Клиенты -->
         <section class="partners_section">
           <div class="wrap_section">
-            <h2 class="fade_in">Наши Клиенты</h2>
+            <h2 class="fade_in"><?php echo $partners_section["title"] ? $partners_section["title"] : "Наши клиенты" ?></h2>
             <div class="main_content">
               <div class="sliders_wrap">
                 <!-- Первый слайдер -->
                 <div class="swiper partners_slider fade_in">
                   <div class="swiper-wrapper">
+				  	<?php 
+						if (!empty($row_one)){
+							foreach ($row_one as $url){				
+					?>
                     <div class="swiper-slide">
                       <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/adobe.webp"
+                        src="<?php echo $url; ?>"
                         alt=""
                         class="partner_logo"
                       />
                     </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/kaspersky.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
+					<?php
+							}
+						}
+					?>
                   </div>
                 </div>
                 <!-- Второй слайдер -->
                 <div class="swiper partners_slider fade_in">
                   <div class="swiper-wrapper">
+				  	<?php 
+						if (!empty($row_two)){
+							foreach ($row_two as $url){				
+					?>
                     <div class="swiper-slide">
                       <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/adobe.webp"
+                        src="<?php echo $url; ?>"
                         alt=""
                         class="partner_logo"
                       />
                     </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/kaspersky.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/microsoft.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/team_viewer.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/esset.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/symantec.webp"
-                        alt=""
-                        class="partner_logo"
-                      />
-                    </div>
+					<?php
+							}
+						}
+					?>
                   </div>
                 </div>
               </div>
@@ -1262,160 +658,143 @@ get_header();
           </div>
         </section>
       </section>
-      <!-- Секция ИТ Решения -->
-      <section id="solutions" class="it_solutions_section">
+
+	        <!-- Секция Отзывов -->
+		<?php 
+		$reviews_clients_section = get_field("reviews_clients_section");
+		$reviews = $reviews_clients_section["reviews"];
+		?>
+		<?php 
+			if ($reviews_clients_section && !empty($reviews)){
+		?>
+      <section class="reviews_clients_section">
         <div class="wrap_section">
-          <video
-            class="video_background fade_in"
-            poster="<?php echo get_template_directory_uri(); ?>/assets/video/it_solutions.webp"
-            muted=""
-            loop=""
-            playsinline=""
-            preload="none"
-            data-autoplay="delay"
-          >
-            <!-- десктоп -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/it_solutions.mp4"
-              type="video/mp4"
-              media="(min-width: 1001px)"
-            />
-            <!-- мобильный -->
-            <source
-              src="<?php echo get_template_directory_uri(); ?>/assets/video/mobile/it_solutions.mp4"
-              type="video/mp4"
-              media="(max-width: 1000px)"
-            />
-          </video>
-
-          <div class="wrap_content">
-            <h2 class="fade_in">
-              Предлагаем IT решения для разных секторов экономики
-            </h2>
-            <div class="our_stecs">
-              <div class="row">
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_1.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>здравоохранение</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_2.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>образование</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_3.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>государственный сегмент</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_4.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>медицина</h3>
-                  </div>
-                </div>
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_5.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>горнорудная промышленность</h3>
+          <div class="head_content">
+            <h2>Отзывы клиентов</h2>
+          </div>
+          <div class="reviews_block">
+            <!-- Одиночный отзыв -->
+			<?php  
+				foreach ($reviews as $review){
+			?>
+            <div class="single_review">
+              <div class="head_review">
+                <img
+                  src="<?php echo $review["avatar_url"] ? esc_attr( $review["avatar_url"] ) : get_template_directory_uri()."/assets/images/avatar_default.webp"; ?>"
+                  class="avatar"
+                  alt="avatar"
+                />
+                <div class="wrap_desription">
+                  <h5 class="name"><?php echo $review["name"]; ?></h5>
+                  <div class="job_title"><?php echo $review["job_title"]; ?></div>
+                  <div class="rating_block">
+                    <img
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/stars_rate_active.png"
+                      class="unactive_rate_stars"
+                      alt="rating"
+                    />
+                    <div class="wrap_stars_active" style="width: <?php echo $review["rating"] ? round(((int)$review["rating"] / 5) * 100) : 0; ?>%">
+                      <img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/stars_rate_active.png"
+                        class="active_rate_stars"
+                        alt="rating"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_6.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>агропромышенный комплекс</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_7.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>жилищно-коммунальные службы</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_8.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>сотовые операторы</h3>
-                  </div>
-                </div>
-
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_9.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>банковский сектор</h3>
-                  </div>
-                </div>
-                <div class="card_stec fade_in">
-                  <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_10.svg"
-                    alt="adobe"
-                  />
-                  <div class="content">
-                    <h3>сфера услуг</h3>
-                  </div>
-                </div>
+              <div class="text_review">
+				<?php echo $review["text_review"]; ?>
               </div>
             </div>
+			<?php
+				}
+			?>
           </div>
-          <div class="overlay_content"></div>
         </div>
       </section>
+		<?php
+			}
+		?>
+
+      <!-- FAQ -->
+	   <?php 
+	 	$questions_section = get_field("questions_section");
+		if ($questions_section){
+		?>
+
+      <section class="questions_section">
+        <div class="wrap_section">
+          <div class="head_content">
+            <h2>FAQ</h2>
+          </div>
+          <div class="main_content">
+			<?php 
+			$i=0;
+				if (!empty($questions_section["repeater"])){
+				foreach ($questions_section["repeater"] as $question){
+			$i++;
+			?>
+
+            <div class="single_question <?php echo ($i === 1) ? "active" : ""; ?>">
+              <div class="wrap_question">
+                <div class="item_number"><?php echo sprintf('%02d', $i)."/"; ?></div>
+                <div class="question_content">
+                  <h5 class="qestion"><?php echo $question['question']; ?></h5>
+
+                  <div class="answer">
+                    <?php echo $question['answer']; ?>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_white.svg"
+                class="arrow"
+                alt="arrow"
+              />
+            </div>
+
+			<?php
+				}
+				}
+			?>
+          </div>
+        </div>
+      </section>
+		<?php
+		}
+	   ?>
 
       <!-- Секция Контактная форма -->
+	   <?php 
+	 	$form_section = get_field("form_section");
+		$is_active_field = $form_section['is_active_field_form'] ? $form_section['is_active_field_form'] : "on";
+	   ?>
       <section id="contacts" class="contact_form_section">
         <div class="wrap_section">
           <div class="two_column">
             <div class="col">
               <div class="head_content">
                 <h2 class="fade_in">
-                  введите ваш номер <br />
-                  телефона
+					<?php 
+						echo $form_section["title"] ? $form_section["title"] : "введите ваш номер <br />телефона"
+					?>
+                  
                 </h2>
                 <p class="description fade_in">
-                  Оставьте заявку, и мы подберем решения, которые повысят
-                  эффективность вашего бизнеса и сэкономят ресурсы за счет
-                  автоматизации. Все — под ключ и без лишней головной боли.
+					<?php 
+						echo $form_section["description"] ? $form_section["description"] : "
+							Оставьте заявку, и мы подберем решения, которые повысят
+							эффективность вашего бизнеса и сэкономят ресурсы за счет
+							автоматизации. Все — под ключ и без лишней головной боли.
+						";
+					?>
                 </p>
               </div>
               <div class="form_wrap">
+				<?php 
+					if ($is_active_field == "on"){
+				?>
                 <form
                   id="custom-contact-form"
                   class="contact-form"
@@ -1455,7 +834,16 @@ get_header();
                     />
                   </button>
                 </form>
-                
+				<?php
+					} else {
+				?>
+					<button class="btn_hs leave_request fade_in write_whatsap mobile_full_width" data-open-popup>
+					<p>Написать в WhatsApp</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg" alt="" />
+					</button>
+				<?php
+					}
+				?>
               </div>
 
               <div class="foot_content">

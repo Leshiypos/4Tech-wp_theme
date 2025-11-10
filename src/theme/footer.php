@@ -2,7 +2,7 @@
 
 
 
-<footer>
+    <footer>
       <div class="wrap">
         <div class="head_footer two_col">
           <div class="col logo fade_in">
@@ -12,6 +12,7 @@
           <div class="col menu_footer fade_in">
             <ul>
               <li><a href="#about">О нас</a></li>
+              <li><a href="#partners">Партнеты</a></li>
               <li><a href="#services">Услуги</a></li>
               <li><a href="#equipment">Оборудование</a></li>
               <li><a href="#contacts">Контакты</a></li>
@@ -36,7 +37,14 @@
             </div>
           </div>
         </div>
-
+        <div class="mobile_menu">
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#partners">Партнеты</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#equipment">Оборудование</a></li>
+          </ul>
+        </div>
         <div class="foot_footer two_col">
           <div class="col col_info fade_in">
             <div class="wrap_content">
@@ -49,17 +57,33 @@
           <div class="col col_privacy_mobile fade_in">
             <a href="">Политика обработки данных</a>
           </div>
-          <div class="col col_prodaction">
-            <div class="wrap_prodaction">
-              <a href="https://fernandes-media.com/" class="wrap_content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fernandes_logo.webp" alt="" />
-                <div>
-                  <div class="title">FERNANDES MEDIA</div>
-                  <div class="descriptios">разработка сайта</div>
-                </div>
-              </a>
+          <div class="col fade_in flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">E-Mail</div>
+              <div class="content">
+                <a href="mailto: houserenov@renovation.com"
+                  >houserenov@renovation.com</a
+                >
+              </div>
             </div>
           </div>
+          <div class="col fade_in flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">Phone number</div>
+              <div class="content">
+                <a href="tel: 7121111244">(712)-11-11-244</a>
+              </div>
+            </div>
+          </div>
+          <div class="col fade_in office_address flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">Main Office</div>
+              <div class="content">
+                Астана, ул. Дінмұхамед Қонаев, з.12/1, ВП 51, 010000
+              </div>
+            </div>
+          </div>
+
           <div class="col col_privacy fade_in">
             <ul>
               <li><a href="">Privacy</a></li>
@@ -68,8 +92,20 @@
             </ul>
           </div>
         </div>
+        <div class="prodaction_block">
+          <div class="wrap_prodaction">
+            <a href="https://fernandes-media.com/" class="wrap_content">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fernandes_logo.webp" alt="" />
+              <div>
+                <div class="title">FERNANDES MEDIA</div>
+                <div class="descriptios">разработка сайта</div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
+
     <div id="popup-overlay" class="hidden">
       <div id="popup" class="popup">
         <div class="wrap_popup">

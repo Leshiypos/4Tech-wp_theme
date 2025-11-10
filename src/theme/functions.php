@@ -99,6 +99,11 @@ function fourtech_setup() {
 			'flex-height' => true,
 		)
 	);
+
+		// Добавляем произвольные тумбы
+	add_image_size( 'goods_thumb', 441, 441, true );
+	add_image_size( 'icon_ig', 85, 85, true );
+
 }
 add_action( 'after_setup_theme', 'fourtech_setup' );
 
@@ -196,6 +201,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Custome posts type
+ */
+require get_template_directory() . '/inc/cpt.php';
+
 // Отправка формы AJAX main form
 function handle_custom_contact_form_ajax() {
     if ( !isset($_POST['custom_contact_form_nonce']) || !wp_verify_nonce($_POST['custom_contact_form_nonce'], 'custom_contact_form') ) {
@@ -267,4 +277,35 @@ add_action('phpmailer_init', function ($m) {
   $m->SMTPAuth = true;
   $m->Username = $user;
   $m->Password = $pass; // пароль приложения
+});
+
+
+
+// разрешить загрузку SVG только администраторам
+// Разрешаем SVG только администраторам
+add_filter('upload_mimes', function ($mimes) {
+    if (current_user_can('manage_options')) {
+        $mimes['svg']  = 'image/svg+xml';
+        $mimes['svgz'] = 'image/svg+xml';
+    } else {
+        // на всякий случай запретим, если кто-то добавил ранее
+        unset($mimes['svg'], $mimes['svgz']);
+    }
+    return $mimes;
+});
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+    $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+    if (in_array($ext, ['svg','svgz'], true)) {
+        $data['ext']             = 'svg';
+        $data['type']            = 'image/svg+xml';
+        $data['proper_filename'] = $data['proper_filename'] ?: $filename;
+    }
+    return $data;
+}, 10, 4);
+// Минимальный фикс превью в админке
+add_action('admin_head', function () {
+    echo '<style>
+      .attachment .thumbnail img[src$=".svg"],
+      .media-icon img[src$=".svg"]{ width:100%; height:auto; }
+    </style>';
 });
