@@ -14,10 +14,10 @@
 				<?php 
 					if (is_page_template( 'template-equipment.php' )){
 				?>
-					<li><a href="/">Решения</a></li>
-					<li><a href="/">Оргтехника</a></li>
-					<li><a href="/">Лицензионное ПО</a></li>
-					<li><a href="/">Оборудование</a></li>
+					<li><a href="/office-equipment/">Оргтехника</a></li>
+					<li><a href="/licensed-software/">Лицензионное ПО</a></li>
+					<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
+					<li><a href="/it-services/">IT-услуги</a></li>
 					<li><a href="#contacts">Контакты</a></li>
 				<?php
 					} else {
@@ -56,10 +56,10 @@
 				<?php 
 					if (is_page_template( 'template-equipment.php' )){
 				?>
-					<li><a href="/">Решения</a></li>
-					<li><a href="/">Оргтехника</a></li>
-					<li><a href="/">ПО</a></li>
-					<li><a href="/">Оборудование</a></li>
+					<li><a href="/office-equipment/">Оргтехника</a></li>
+					<li><a href="/licensed-software/">Лицензионное ПО</a></li>
+					<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
+					<li><a href="/it-services/">IT-услуги</a></li>
 				<?php
 					} else {
 				?>

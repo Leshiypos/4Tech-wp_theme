@@ -63,18 +63,18 @@ get_header();
             /></a>
             <nav>
               <ul class="main_menu">
-                <li><a href="#">Комплексные решения</a></li>
-                <li><a href="#">Оргтехника</a></li>
-                <li><a href="#">Лицензионное ПО</a></li>
-                <li><a href="#">Cетевое оборудование</a></li>
+				<li><a href="/office-equipment/">Оргтехника</a></li>
+				<li><a href="/licensed-software/">Лицензионное ПО</a></li>
+				<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
+				<li><a href="/it-services/">IT-услуги</a></li>
    
               </ul>
             </nav>
             <div class="wrap_btns">
-              <a href="#" class="leave_req_btn" data-open-popup
-                >Оставить заявку
+              <a href="#" class="leave_req_btn" data-dropdownmenu-open
+                >
                 <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-diag.svg"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
                   alt="leave a request"
               /></a>
             </div>
@@ -177,8 +177,8 @@ get_header();
                   playsinline=""
                   preload="none"
                   data-autoplay="delay"
-                >
-                  <!-- десктоп -->
+                > 
+                  <!-- десктоп --> 
                   <source
                     src="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.mp4"
                     type="video/mp4"

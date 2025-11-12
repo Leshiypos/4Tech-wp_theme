@@ -49,6 +49,28 @@ function faqInit() {
   });
 }
 
+// Меню Desktop
+
+function burgerMenuDesctopInit() {
+  const menu = document.getElementById("drop_down_menu_desktop");
+  if (!menu) return;
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    const btnClose = target.closest(".close_menu");
+    const btnOpen = target.closest("[data-dropdownmenu-open]");
+    if (btnOpen) {
+      e.preventDefault();
+      menu.classList.add("open");
+      return;
+    }
+    if (btnClose) {
+      e.preventDefault();
+      menu.classList.remove("open");
+      return;
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // preloader
 
@@ -368,6 +390,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //   FAQ
   faqInit();
+
+  //   DropDown Desktop menu
+  burgerMenuDesctopInit();
 });
 
 // отложенный загрузка  видер

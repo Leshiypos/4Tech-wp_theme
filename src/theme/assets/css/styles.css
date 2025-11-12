@@ -332,6 +332,43 @@ a {
         width: 110px;
         height: 15px; } }
 
+.drop_down_menu_desktop {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 99;
+  transition: all 0.3s ease; }
+  .drop_down_menu_desktop.open {
+    top: 0;
+    left: 0; }
+  .drop_down_menu_desktop .wrap_menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column; }
+    .drop_down_menu_desktop .wrap_menu .close_menu {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      cursor: pointer; }
+    .drop_down_menu_desktop .wrap_menu .logo {
+      height: 20%;
+      opacity: 0.3; }
+    .drop_down_menu_desktop .wrap_menu .links_page {
+      height: 25%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between; }
+      .drop_down_menu_desktop .wrap_menu .links_page a {
+        font-size: 18px;
+        font-size: clamp(14px, calc( 14px + (18 - 14) * ((100vw - 1000px) / (1900 - 1000)) ), 18px); }
+
 html {
   font-family: "HelveticaNeueCyr", Arial, sans-serif;
   color: white;
@@ -2882,6 +2919,8 @@ footer {
         align-items: flex-start;
         margin-bottom: 10px; }
         .solutions_second_section .head_content .title h2 {
+          position: relative;
+          z-index: 1;
           font-size: 30px;
           max-width: 260px; }
         .solutions_second_section .head_content .description_wrap {
@@ -3193,7 +3232,8 @@ footer {
       font-size: 40px;
       font-size: clamp(28px, calc( 28px + (40 - 28) * ((100vw - 1000px) / (1900 - 1000)) ), 40px);
       line-height: 110%;
-      letter-spacing: -0.03em; }
+      letter-spacing: -0.03em;
+      margin-left: 37px; }
   .questions_section .main_content .single_question {
     display: flex;
     flex-flow: row nowrap;
@@ -3280,7 +3320,8 @@ footer {
         margin-bottom: 0; }
         .questions_section .head_content h2 {
           font-size: 40px;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          margin-left: 0; }
       .questions_section .main_content .single_question {
         padding-top: 34px;
         padding-bottom: 34px; }

@@ -20,7 +20,23 @@
   </head>
   <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-    <!-- <div id="preloader">
+			  <!-- Выпадающее меню -->
+	<div class="drop_down_menu_desktop" id="drop_down_menu_desktop">
+		<div class="wrap_menu">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cross.svg" class="close_menu" alt="">
+			<div class="logo">
+				<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section_big.webp" alt=""></a>
+				
+			</div>
+			<ul class="links_page">
+				<li><a href="/office-equipment/">Оргтехника</a></li>
+				<li><a href="/licensed-software/">Лицензионное ПО</a></li>
+				<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
+				<li><a href="/it-services/">IT-услуги</a></li>
+			</ul>
+		</div>
+	</div>
+    <div id="preloader">
       <div class="wrap_preloader">
         <div class="wrap_img back">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" />
@@ -29,5 +45,5 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" />
         </div>
       </div>
-    </div> -->
+    </div>
 

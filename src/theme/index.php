@@ -87,10 +87,10 @@ get_header();
               </ul>
             </nav>
             <div class="wrap_btns">
-              <a href="#" class="leave_req_btn" data-open-popup
-                >Оставить заявку
+              <a href="#" class="leave_req_btn" data-dropdownmenu-open
+                >
                 <img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-diag.svg"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
                   alt="leave a request"
               /></a>
             </div>

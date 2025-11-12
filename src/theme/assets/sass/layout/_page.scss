@@ -25,6 +25,7 @@ body {
 .right_col {
   flex: 1;
 }
+
 header {
   .desktop {
     width: 90%;
@@ -3833,6 +3834,8 @@ footer {
       margin-bottom: 10px;
       .title {
         h2 {
+          position: relative;
+          z-index: 1;
           font-size: 30px;
           max-width: 260px;
         }
@@ -4296,6 +4299,7 @@ footer {
       @include fluid-font(28, 40);
       line-height: 110%;
       letter-spacing: -0.03em;
+      margin-left: 37px;
     }
   }
   .main_content {
@@ -4416,6 +4420,7 @@ footer {
       h2 {
         font-size: 40px;
         margin-bottom: 20px;
+        margin-left: 0;
       }
     }
     .main_content {
