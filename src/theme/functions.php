@@ -309,3 +309,6 @@ add_action('admin_head', function () {
       .media-icon img[src$=".svg"]{ width:100%; height:auto; }
     </style>';
 });
+
+// убираем админ-бар
+add_filter('show_admin_bar', '__return_false');

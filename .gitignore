@@ -7,6 +7,6 @@
 *.log
 /.srv/*
 !/.srv/custom.ini
-
+.vscode
 
 

@@ -1880,6 +1880,7 @@ header {
       }
     }
   }
+
   @include mobile(390) {
     .head_content {
       .title {
@@ -1892,45 +1893,92 @@ header {
 }
 
 // На странице Оборудование
-.equipment_page .solution_section {
-  margin-bottom: 136px;
-  .head_content {
-    .description_wrap {
-      max-width: 24%;
-      .wrap {
-        img {
-          display: none;
+.equipment_page {
+  // header
+  header {
+    .desktop {
+      width: fit-content;
+      .wrap_btns {
+        white-space: nowrap;
+      }
+    }
+    .wrap_header {
+      gap: 55px;
+    }
+  }
+
+  //   Hero section
+  .hero_section {
+    h1 {
+      font-size: 80px;
+      @include fluid-font(35, 80);
+
+      line-height: 94%;
+      max-width: 65%;
+    }
+    .wrap_section {
+      .wrap_content {
+        .head_content {
+          .pre_title {
+            margin-bottom: 15px;
+          }
         }
       }
     }
-    .title {
-      justify-content: space-between;
-      h2 {
-        font-size: 50px;
-        @include fluid-font(24, 50);
-        font-weight: 300;
-        line-height: 100%;
-        text-transform: lowercase;
+    @include mobile(550) {
+      .btn_hs {
+        width: 264px;
       }
     }
   }
-  @include mobile {
+  .solution_section {
+    margin-bottom: 136px;
     .head_content {
+      .description_wrap {
+        max-width: 24%;
+        .wrap {
+          img {
+            display: none;
+          }
+        }
+      }
       .title {
+        justify-content: space-between;
         h2 {
-          font-size: 40px;
+          font-size: 50px;
+          @include fluid-font(24, 50);
+          font-weight: 300;
+          line-height: 100%;
+          text-transform: lowercase;
+        }
+      }
+    }
+    @include mobile {
+      .head_content {
+        .title {
+          h2 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    @include mobile(390) {
+      .head_content {
+        .title {
+          h2 {
+            font-size: 30px;
+          }
         }
       }
     }
   }
-  @include mobile(390) {
-    .head_content {
-      .title {
-        h2 {
-          font-size: 30px;
-        }
-      }
+  .contact_form_section {
+    h2 {
+      line-height: 100%;
     }
+  }
+  .btn_hs.leave_request.write_whatsap.btn_margin_bot {
+    margin-bottom: 140px;
   }
 }
 
@@ -3545,14 +3593,20 @@ footer {
 // <----------------------------->
 .solutions_second_section {
   position: relative;
-  margin-top: 68px;
+  //   margin-top: 68px;
   margin-bottom: 51px;
   padding-bottom: 10px;
   overflow: hidden;
+  &.first_section {
+    margin-bottom: 140px;
+    @include mobile {
+      margin-bottom: 90px;
+    }
+  }
 
   .wrap_section {
     padding-top: 72px;
-    margin: 0 20px;
+    @extend %marginWrapDesktopLRLarge;
   }
   .head_content {
     @extend %flexRowNowrapSB;
@@ -3561,9 +3615,9 @@ footer {
     .title {
       flex: 1;
       h2 {
-        font-size: 70px;
-        @include fluid-font(40, 70);
-        font-weight: normal;
+        font-size: 50px;
+        @include fluid-font(20, 50);
+        font-weight: 300;
         line-height: 106%;
       }
     }
@@ -3583,6 +3637,7 @@ footer {
         position: relative;
         width: 230px;
         height: 230px;
+        transform: scale(1.3);
         .content_logo {
           position: absolute;
           top: 50%;
@@ -3607,13 +3662,13 @@ footer {
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 10px;
     }
     .single_solution {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      gap: 32px;
+      gap: 25px;
       width: 100%;
       max-width: 350px;
       img {
@@ -3624,23 +3679,28 @@ footer {
     h5 {
       font-weight: 500;
       font-size: 20px;
-      @include fluid-font(14, 20);
+      @include fluid-font(12, 20);
       line-height: 125%;
       letter-spacing: -0.03em;
       margin-bottom: 10px;
+      white-space: nowrap;
+      span {
+        opacity: 0;
+      }
     }
     .post_title {
       font-weight: 400;
       font-size: 14px;
-      @include fluid-font(10, 14);
+      @include fluid-font(9, 14);
       line-height: 136%;
       letter-spacing: -0.03em;
       color: #8f8f8f;
     }
   }
   @include desktop(1600) {
-    margin-top: 55px;
+    // margin-top: 55px;
     margin-bottom: 50px;
+
     .head_content {
       margin-bottom: 140px;
       .description_wrap {
@@ -3663,10 +3723,10 @@ footer {
     }
     .main_content {
       .single_solution {
-        gap: 24px;
+        gap: 15px;
         max-width: 300px;
         img {
-          width: 75px;
+          width: 65px;
         }
       }
       h5 {
@@ -3676,8 +3736,9 @@ footer {
   }
 
   @include desktop(1400) {
-    margin-top: 20px;
+    // margin-top: 20px;
     margin-bottom: 45px;
+
     .head_content {
       margin-bottom: 130px;
       .description_wrap {
@@ -3712,8 +3773,11 @@ footer {
     }
   }
   @include desktop(1200) {
-    margin-top: 0;
+    // margin-top: 0;
     margin-bottom: 40px;
+    // &.first_section {
+    //   margin-top: 0;
+    // }
     .head_content {
       margin-bottom: 100px;
       .description_wrap {
@@ -3750,6 +3814,15 @@ footer {
 
   @include mobile {
     margin-top: 45px;
+    &.first_section {
+      margin-top: 45px;
+    }
+    &.second_section {
+      margin-top: 75px;
+      .head_content {
+        display: none;
+      }
+    }
     margin-bottom: 40px;
     .wrap_section {
       padding-top: 0;
@@ -3760,7 +3833,7 @@ footer {
       margin-bottom: 10px;
       .title {
         h2 {
-          font-size: 40px;
+          font-size: 30px;
           max-width: 260px;
         }
       }
@@ -3802,6 +3875,7 @@ footer {
       }
       h5 {
         font-size: 20px;
+        white-space: wrap;
       }
       .post_title {
         font-size: 14px;
@@ -3840,7 +3914,7 @@ footer {
 // Каталог странцы оборудования
 .catalog_equipment_section {
   .wrap_section {
-    margin: 0 20px;
+    @extend %marginWrapDesktopLRLarge;
   }
   h2 {
     font-weight: 300;
@@ -4011,7 +4085,7 @@ footer {
 .reviews_clients_section {
   margin-top: 135px;
   .wrap_section {
-    margin: 0 20px;
+    @extend %marginWrapDesktopLRLarge;
   }
   .head_content {
     margin-bottom: 75px;
@@ -4185,13 +4259,33 @@ footer {
       }
     }
   }
+
+  @include mobile(410) {
+    .head_content {
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .reviews_block {
+      .head_review {
+        .wrap_desription {
+          .name {
+            font-size: 20px;
+          }
+          .job_title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // FAQ
 .questions_section {
   margin-top: 76px;
   .wrap_section {
-    margin: 0 20px;
+    @extend %marginWrapDesktopLRLarge;
   }
   .head_content {
     margin-bottom: 40px;
@@ -4215,6 +4309,11 @@ footer {
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       cursor: pointer;
       transition: padding-bottom 0.3s ease;
+      &:hover {
+        .arrow {
+          opacity: 1;
+        }
+      }
       .arrow {
         transform: rotate(45deg);
         margin-top: 20px;
@@ -4233,6 +4332,8 @@ footer {
         font-size: 20px;
         @include fluid-font(15, 20);
         color: #cecece;
+        min-width: 10%;
+        text-align: center;
       }
 
       .qestion {
@@ -4321,6 +4422,15 @@ footer {
       .single_question {
         padding-top: 34px;
         padding-bottom: 34px;
+        .arrow {
+          display: none !important;
+        }
+        &:hover {
+          .arrow {
+            opacity: 0;
+            display: none;
+          }
+        }
         .qestion {
           font-size: 25px;
         }
@@ -4331,7 +4441,7 @@ footer {
         &.active {
           padding-bottom: 34px;
           .arrow {
-            display: none;
+            display: none !important;
           }
         }
         .item_number {

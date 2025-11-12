@@ -27,6 +27,14 @@
     .hero_section, .licensed_software_section, .protect_section, .development_section {
       padding: 5px; } }
 
+.solutions_second_section .wrap_section, .catalog_equipment_section .wrap_section, .reviews_clients_section .wrap_section, .questions_section .wrap_section {
+  margin-left: 32px;
+  margin-right: 32px; }
+  @media screen and (max-width: 1000px) {
+    .solutions_second_section .wrap_section, .catalog_equipment_section .wrap_section, .reviews_clients_section .wrap_section, .questions_section .wrap_section {
+      margin-left: 20px;
+      margin-right: 20px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -316,6 +324,13 @@ a {
       .rating_block img {
         width: 88px;
         height: 12px; } }
+  @media screen and (max-width: 410px) {
+    .rating_block {
+      width: 110px;
+      height: 15px; }
+      .rating_block img {
+        width: 110px;
+        height: 15px; } }
 
 html {
   font-family: "HelveticaNeueCyr", Arial, sans-serif;
@@ -1543,6 +1558,22 @@ header .mobile {
     .solution_section .head_content .title h2 {
       font-size: 50px; } }
 
+.equipment_page header .desktop {
+  width: fit-content; }
+  .equipment_page header .desktop .wrap_btns {
+    white-space: nowrap; }
+.equipment_page header .wrap_header {
+  gap: 55px; }
+.equipment_page .hero_section h1 {
+  font-size: 80px;
+  font-size: clamp(35px, calc( 35px + (80 - 35) * ((100vw - 1000px) / (1900 - 1000)) ), 80px);
+  line-height: 94%;
+  max-width: 65%; }
+.equipment_page .hero_section .wrap_section .wrap_content .head_content .pre_title {
+  margin-bottom: 15px; }
+@media screen and (max-width: 550px) {
+  .equipment_page .hero_section .btn_hs {
+    width: 264px; } }
 .equipment_page .solution_section {
   margin-bottom: 136px; }
   .equipment_page .solution_section .head_content .description_wrap {
@@ -1563,6 +1594,10 @@ header .mobile {
   @media screen and (max-width: 390px) {
     .equipment_page .solution_section .head_content .title h2 {
       font-size: 30px; } }
+.equipment_page .contact_form_section h2 {
+  line-height: 100%; }
+.equipment_page .btn_hs.leave_request.write_whatsap.btn_margin_bot {
+  margin-bottom: 140px; }
 
 .development_section {
   margin-top: 200px; }
@@ -2685,22 +2720,25 @@ footer {
     width: 100px; } }
 .solutions_second_section {
   position: relative;
-  margin-top: 68px;
   margin-bottom: 51px;
   padding-bottom: 10px;
   overflow: hidden; }
+  .solutions_second_section.first_section {
+    margin-bottom: 140px; }
+    @media screen and (max-width: 1000px) {
+      .solutions_second_section.first_section {
+        margin-bottom: 90px; } }
   .solutions_second_section .wrap_section {
-    padding-top: 72px;
-    margin: 0 20px; }
+    padding-top: 72px; }
   .solutions_second_section .head_content {
     align-items: center;
     margin-bottom: 150px; }
     .solutions_second_section .head_content .title {
       flex: 1; }
       .solutions_second_section .head_content .title h2 {
-        font-size: 70px;
-        font-size: clamp(40px, calc( 40px + (70 - 40) * ((100vw - 1000px) / (1900 - 1000)) ), 70px);
-        font-weight: normal;
+        font-size: 50px;
+        font-size: clamp(20px, calc( 20px + (50 - 20) * ((100vw - 1000px) / (1900 - 1000)) ), 50px);
+        font-weight: 300;
         line-height: 106%; }
     .solutions_second_section .head_content .description_wrap {
       flex: 1;
@@ -2716,7 +2754,8 @@ footer {
       .solutions_second_section .head_content .description_wrap .block_cube {
         position: relative;
         width: 230px;
-        height: 230px; }
+        height: 230px;
+        transform: scale(1.3); }
         .solutions_second_section .head_content .description_wrap .block_cube .content_logo {
           position: absolute;
           top: 50%;
@@ -2735,12 +2774,12 @@ footer {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 30px; }
+    gap: 10px; }
   .solutions_second_section .main_content .single_solution {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 32px;
+    gap: 25px;
     width: 100%;
     max-width: 350px; }
     .solutions_second_section .main_content .single_solution img {
@@ -2749,20 +2788,22 @@ footer {
   .solutions_second_section .main_content h5 {
     font-weight: 500;
     font-size: 20px;
-    font-size: clamp(14px, calc( 14px + (20 - 14) * ((100vw - 1000px) / (1900 - 1000)) ), 20px);
+    font-size: clamp(12px, calc( 12px + (20 - 12) * ((100vw - 1000px) / (1900 - 1000)) ), 20px);
     line-height: 125%;
     letter-spacing: -0.03em;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    white-space: nowrap; }
+    .solutions_second_section .main_content h5 span {
+      opacity: 0; }
   .solutions_second_section .main_content .post_title {
     font-weight: 400;
     font-size: 14px;
-    font-size: clamp(10px, calc( 10px + (14 - 10) * ((100vw - 1000px) / (1900 - 1000)) ), 14px);
+    font-size: clamp(9px, calc( 9px + (14 - 9) * ((100vw - 1000px) / (1900 - 1000)) ), 14px);
     line-height: 136%;
     letter-spacing: -0.03em;
     color: #8f8f8f; }
   @media screen and (min-width: 1001px) and (max-width: 1600px) {
     .solutions_second_section {
-      margin-top: 55px;
       margin-bottom: 50px; }
       .solutions_second_section .head_content {
         margin-bottom: 140px; }
@@ -2776,15 +2817,14 @@ footer {
         .solutions_second_section .head_content .description_wrap .description {
           max-width: 360px; }
       .solutions_second_section .main_content .single_solution {
-        gap: 24px;
+        gap: 15px;
         max-width: 300px; }
         .solutions_second_section .main_content .single_solution img {
-          width: 75px; }
+          width: 65px; }
       .solutions_second_section .main_content h5 {
         margin-bottom: 8px; } }
   @media screen and (min-width: 1001px) and (max-width: 1400px) {
     .solutions_second_section {
-      margin-top: 20px;
       margin-bottom: 45px; }
       .solutions_second_section .head_content {
         margin-bottom: 130px; }
@@ -2806,7 +2846,6 @@ footer {
         margin-bottom: 6px; } }
   @media screen and (min-width: 1001px) and (max-width: 1200px) {
     .solutions_second_section {
-      margin-top: 0;
       margin-bottom: 40px; }
       .solutions_second_section .head_content {
         margin-bottom: 100px; }
@@ -2830,6 +2869,12 @@ footer {
     .solutions_second_section {
       margin-top: 45px;
       margin-bottom: 40px; }
+      .solutions_second_section.first_section {
+        margin-top: 45px; }
+      .solutions_second_section.second_section {
+        margin-top: 75px; }
+        .solutions_second_section.second_section .head_content {
+          display: none; }
       .solutions_second_section .wrap_section {
         padding-top: 0; }
       .solutions_second_section .head_content {
@@ -2837,7 +2882,7 @@ footer {
         align-items: flex-start;
         margin-bottom: 10px; }
         .solutions_second_section .head_content .title h2 {
-          font-size: 40px;
+          font-size: 30px;
           max-width: 260px; }
         .solutions_second_section .head_content .description_wrap {
           width: 100%; }
@@ -2867,7 +2912,8 @@ footer {
         flex: 1 1 290px;
         min-width: 290px; }
       .solutions_second_section .main_content h5 {
-        font-size: 20px; }
+        font-size: 20px;
+        white-space: wrap; }
       .solutions_second_section .main_content .post_title {
         font-size: 14px; } }
   @media screen and (max-width: 650px) {
@@ -2887,8 +2933,6 @@ footer {
       .solutions_second_section .head_content .description_wrap .block_cube .content_logo img {
         width: 75px; } }
 
-.catalog_equipment_section .wrap_section {
-  margin: 0 20px; }
 .catalog_equipment_section h2 {
   font-weight: 300;
   font-size: 70px;
@@ -3010,8 +3054,6 @@ footer {
 
 .reviews_clients_section {
   margin-top: 135px; }
-  .reviews_clients_section .wrap_section {
-    margin: 0 20px; }
   .reviews_clients_section .head_content {
     margin-bottom: 75px; }
     .reviews_clients_section .head_content h2 {
@@ -3134,11 +3176,16 @@ footer {
       .reviews_clients_section .reviews_block .single_review {
         flex: 1 1 310px;
         padding: 35px 18px 41px 25px; } }
+  @media screen and (max-width: 410px) {
+    .reviews_clients_section .head_content h2 {
+      font-size: 40px; }
+    .reviews_clients_section .reviews_block .head_review .wrap_desription .name {
+      font-size: 20px; }
+    .reviews_clients_section .reviews_block .head_review .wrap_desription .job_title {
+      font-size: 14px; } }
 
 .questions_section {
   margin-top: 76px; }
-  .questions_section .wrap_section {
-    margin: 0 20px; }
   .questions_section .head_content {
     margin-bottom: 40px; }
     .questions_section .head_content h2 {
@@ -3157,6 +3204,8 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     cursor: pointer;
     transition: padding-bottom 0.3s ease; }
+    .questions_section .main_content .single_question:hover .arrow {
+      opacity: 1; }
     .questions_section .main_content .single_question .arrow {
       transform: rotate(45deg);
       margin-top: 20px;
@@ -3171,7 +3220,9 @@ footer {
       font-weight: 300;
       font-size: 20px;
       font-size: clamp(15px, calc( 15px + (20 - 15) * ((100vw - 1000px) / (1900 - 1000)) ), 20px);
-      color: #cecece; }
+      color: #cecece;
+      min-width: 10%;
+      text-align: center; }
     .questions_section .main_content .single_question .qestion {
       font-weight: 400;
       font-size: 25px;
@@ -3233,6 +3284,11 @@ footer {
       .questions_section .main_content .single_question {
         padding-top: 34px;
         padding-bottom: 34px; }
+        .questions_section .main_content .single_question .arrow {
+          display: none !important; }
+        .questions_section .main_content .single_question:hover .arrow {
+          opacity: 0;
+          display: none; }
         .questions_section .main_content .single_question .qestion {
           font-size: 25px; }
         .questions_section .main_content .single_question .answer {
@@ -3241,7 +3297,7 @@ footer {
         .questions_section .main_content .single_question.active {
           padding-bottom: 34px; }
           .questions_section .main_content .single_question.active .arrow {
-            display: none; }
+            display: none !important; }
         .questions_section .main_content .single_question .item_number {
           display: none; }
         .questions_section .main_content .single_question:last-child {

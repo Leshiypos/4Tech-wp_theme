@@ -20,7 +20,7 @@
   </head>
   <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-    <div id="preloader">
+    <!-- <div id="preloader">
       <div class="wrap_preloader">
         <div class="wrap_img back">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" />
@@ -29,5 +29,5 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" />
         </div>
       </div>
-    </div>
+    </div> -->
 

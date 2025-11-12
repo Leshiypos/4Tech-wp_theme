@@ -58,12 +58,11 @@ get_header();
       <header>
         <div class="desktop">
           <div class="wrap_header">
-            <a href="#begin"
+            <a href="/"
               ><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo"
             /></a>
             <nav>
               <ul class="main_menu">
-                <li><a href="/">Главная</a></li>
                 <li><a href="#">Комплексные решения</a></li>
                 <li><a href="#">Оргтехника</a></li>
                 <li><a href="#">Лицензионное ПО</a></li>
@@ -194,8 +193,7 @@ get_header();
                 </video>
 
                 <div class="content fade_in">
-                  <p class="number">4</p>
-                  <p>шага</p>
+ 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_for_cube.png" alt="" />
                 </div>
               </div>
             </div>
@@ -374,7 +372,7 @@ get_header();
 		if ($is_active_solution_second){
 		?>
 
-      <section class="solutions_second_section">
+      <section class="solutions_second_section first_section">
         <div class="wrap_section">
           <div class="head_content">
             <div class="title">
@@ -426,7 +424,7 @@ get_header();
 			if ($solutions_second_section && !empty($solution_repeater)){
 				foreach ($solution_repeater as $repeater){
 			?>
-              <div class="single_solution">
+              <div class="single_solution fade_in">
                 <img src="<?php echo $repeater["icon_url"] ? $repeater["icon_url"] : get_template_directory_uri().'/assets/images/icons/sol_1.svg'; ?>" alt="" />
                 <div class="right_col">
                   <h5><?php echo $repeater["title_rep"]; ?></h5>
@@ -461,7 +459,7 @@ get_header();
 	   ?>
       <section class="catalog_equipment_section">
         <div class="wrap_section">
-          <div class="head_content">
+          <div class="head_content fade_in">
             <h2>Каталог</h2>
           </div>
           <div class="main_content">
@@ -471,7 +469,7 @@ get_header();
 			setup_postdata( $post );
 			?>
            <!-- Карточка -->
-            <div class="card">
+            <div class="card fade_in">
               <div class="img_wrap">
                 <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "goods_thumb" ) ? get_the_post_thumbnail_url( get_the_ID(), "goods_thumb" ) : get_template_directory_uri().'/assets/images/img_not_found.webp' ; ?>" alt="" />
               </div>
@@ -505,7 +503,7 @@ get_header();
 	   <?php 
 	 	$advantages_section = get_field("advantages_section");
 	   ?>
-      <section class="solutions_second_section">
+      <section class="solutions_second_section second_section">
         <div class="wrap_section">
           <div class="head_content">
             <div class="title">
@@ -558,7 +556,7 @@ get_header();
 			if ($advantages_section && !empty($advantages_repeater)){
 				foreach ($advantages_repeater as $repeater){
 			?>
-              <div class="single_solution">
+              <div class="single_solution fade_in">
                 <img src="<?php echo $repeater["icon_url"] ? $repeater["icon_url"] : get_template_directory_uri().'/assets/images/icons/sol_1.svg'; ?>" alt="" />
                 <div class="right_col">
                   <h5><?php echo $repeater["title_rep"]; ?></h5>
@@ -646,7 +644,7 @@ get_header();
 		?>
       <section class="reviews_clients_section">
         <div class="wrap_section">
-          <div class="head_content">
+          <div class="head_content fade_in">
             <h2>Отзывы клиентов</h2>
           </div>
           <div class="reviews_block">
@@ -654,7 +652,7 @@ get_header();
 			<?php  
 				foreach ($reviews as $review){
 			?>
-            <div class="single_review">
+            <div class="single_review fade_in">
               <div class="head_review">
                 <img
                   src="<?php echo $review["avatar_url"] ? esc_attr( $review["avatar_url"] ) : get_template_directory_uri()."/assets/images/avatar_default.webp"; ?>"
@@ -703,9 +701,9 @@ get_header();
       <section class="questions_section">
         <div class="wrap_section">
           <div class="head_content">
-            <h2>FAQ</h2>
+            <h2 class="fade_in">FAQ</h2>
           </div>
-          <div class="main_content">
+          <div class="main_content fade_in">
 			<?php 
 			$i=0;
 				if (!empty($questions_section["repeater"])){
@@ -814,7 +812,7 @@ get_header();
 				<?php
 					} else {
 				?>
-					<button class="btn_hs leave_request fade_in write_whatsap mobile_full_width" data-open-popup>
+					<button class="btn_hs leave_request fade_in write_whatsap mobile_full_width btn_margin_bot" data-open-popup>
 					<p>Написать в WhatsApp</p>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg" alt="" />
 					</button>
