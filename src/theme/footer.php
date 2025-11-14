@@ -57,9 +57,9 @@
 					if (is_page_template( 'template-equipment.php' )){
 				?>
 					<li><a href="/office-equipment/">Оргтехника</a></li>
-					<li><a href="/licensed-software/">Лицензионное ПО</a></li>
+					<li><a href="/licensed-software/">ПО</a></li>
 					<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
-					<li><a href="/it-services/">IT-услуги</a></li>
+					<li><a href="/it-services/">IT</a></li>
 				<?php
 					} else {
 				?>

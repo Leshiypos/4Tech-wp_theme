@@ -413,7 +413,7 @@ header .desktop {
     padding: 25px; }
   header .desktop .main_menu {
     align-items: center;
-    gap: 40px; }
+    gap: 45px; }
     header .desktop .main_menu a {
       font-size: 14px;
       font-weight: 400;
@@ -492,7 +492,8 @@ header .mobile {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 0 16px 48px 55px; }
+    margin: 0 16px 48px 55px;
+    width: 96%; }
     .hero_section .wrap_section .wrap_content .head_content .pre_title {
       background-color: rgba(255, 255, 255, 0.03);
       justify-content: flex-start;
@@ -1601,13 +1602,24 @@ header .mobile {
     white-space: nowrap; }
 .equipment_page header .wrap_header {
   gap: 55px; }
+  .equipment_page header .wrap_header .main_menu {
+    gap: 45px; }
+@media screen and (min-width: 1001px) and (max-width: 1400px) {
+  .equipment_page header .wrap_header .main_menu {
+    gap: 40px; } }
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  .equipment_page header .wrap_header .main_menu {
+    gap: 35px; } }
 .equipment_page .hero_section h1 {
   font-size: 80px;
   font-size: clamp(35px, calc( 35px + (80 - 35) * ((100vw - 1000px) / (1900 - 1000)) ), 80px);
   line-height: 94%;
-  max-width: 65%; }
+  max-width: 68%; }
 .equipment_page .hero_section .wrap_section .wrap_content .head_content .pre_title {
   margin-bottom: 15px; }
+@media screen and (max-width: 1000px) {
+  .equipment_page .hero_section h1 {
+    max-width: 100%; } }
 @media screen and (max-width: 550px) {
   .equipment_page .hero_section .btn_hs {
     width: 264px; } }
@@ -1625,9 +1637,29 @@ header .mobile {
       font-weight: 300;
       line-height: 100%;
       text-transform: lowercase; }
+    .equipment_page .solution_section .head_content .title .four_steps .video_background {
+      width: auto; }
+  @media screen and (min-width: 1001px) and (max-width: 1600px) {
+    .equipment_page .solution_section .head_content .title .four_steps .content img {
+      width: 90px; } }
+  @media screen and (min-width: 1001px) and (max-width: 1400px) {
+    .equipment_page .solution_section .head_content .title .four_steps .content img {
+      width: 65px; } }
+  @media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .equipment_page .solution_section .head_content .title .four_steps .content img {
+      width: 52px; } }
   @media screen and (max-width: 1000px) {
     .equipment_page .solution_section .head_content .title h2 {
-      font-size: 40px; } }
+      font-size: 40px; }
+    .equipment_page .solution_section .head_content .title .four_steps .content img {
+      width: auto; } }
+  @media screen and (max-width: 500px) {
+    .equipment_page .solution_section .head_content .title .four_steps {
+      padding: 110px 0; }
+    .equipment_page .solution_section .main_content .col h3 {
+      font-size: 36px; }
+    .equipment_page .solution_section .main_content .col p {
+      font-size: 14px; } }
   @media screen and (max-width: 390px) {
     .equipment_page .solution_section .head_content .title h2 {
       font-size: 30px; } }
@@ -2815,7 +2847,7 @@ footer {
   .solutions_second_section .main_content .single_solution {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 25px;
     width: 100%;
     max-width: 350px; }
@@ -2922,7 +2954,7 @@ footer {
           position: relative;
           z-index: 1;
           font-size: 30px;
-          max-width: 260px; }
+          max-width: 263px; }
         .solutions_second_section .head_content .description_wrap {
           width: 100%; }
           .solutions_second_section .head_content .description_wrap .wrap {

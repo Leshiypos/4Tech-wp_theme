@@ -24,19 +24,37 @@ get_header();
           <div></div>
           <ul class="burger__list">
             <li class="burger__list-link">
-              <a href="/" data-link-burger>Главная</a>
+              <a href="/#about" data-link-burger>О нас</a>
             </li>
             <li class="burger__list-link">
-              <a href="#" data-link-burger>Комплексные решения</a>
+              <a href="/#services" data-link-burger>Услуги</a>
             </li>
             <li class="burger__list-link">
-              <a href="#" data-link-burger>Оргтехника</a>
+              <a href="/#soft" data-link-burger>Софт</a>
             </li>
             <li class="burger__list-link">
-              <a href="#" data-link-burger>Лицензионное ПО</a>
+              <a href="/#equipment" data-link-burger>Оборудование</a>
             </li>
             <li class="burger__list-link">
-              <a href="#" data-link-burger>Cетевое оборудование</a>
+              <a href="/#protect" data-link-burger>Кибербезопасность</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#outsourcing" data-link-burger>Аутсорсинг</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#solution" data-link-burger>Этапы</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#development" data-link-burger>Разработка</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#partners" data-link-burger>Партнеры</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#solutions" data-link-burger>Решения</a>
+            </li>
+            <li class="burger__list-link">
+              <a href="/#contacts" data-link-burger>Контакты</a>
             </li>
           </ul>
 
@@ -81,7 +99,8 @@ get_header();
           </div>
         </div>
         <div class="mobile">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" />
+
+          <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" /></a>
           <button class="burger_btn" data-toggle-menu>
             <img
               src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn.svg"
@@ -168,9 +187,9 @@ get_header();
                 комплексное решение по внедрению <br />
                 IT архитектуры в вашу компанию
               </h2>
-              <div class="four_steps">
+              <div class="four_steps fade_in">
                 <video
-                  class="video_background fade_in"
+                  class="video_background "
                   poster="<?php echo get_template_directory_uri(); ?>/assets/video/cube_mini.webp"
                   muted=""
                   loop=""

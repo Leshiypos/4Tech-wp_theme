@@ -16,37 +16,37 @@ get_header();
           <div></div>
           <ul class="burger__list">
             <li class="burger__list-link">
-              <a href="#about" data-link-burger>О нас</a>
+              <a href="/#about" data-link-burger>О нас</a>
             </li>
             <li class="burger__list-link">
-              <a href="#services" data-link-burger>Услуги</a>
+              <a href="/#services" data-link-burger>Услуги</a>
             </li>
             <li class="burger__list-link">
-              <a href="#soft" data-link-burger>Софт</a>
+              <a href="/#soft" data-link-burger>Софт</a>
             </li>
             <li class="burger__list-link">
-              <a href="#equipment" data-link-burger>Оборудование</a>
+              <a href="/#equipment" data-link-burger>Оборудование</a>
             </li>
             <li class="burger__list-link">
-              <a href="#protect" data-link-burger>Кибербезопасность</a>
+              <a href="/#protect" data-link-burger>Кибербезопасность</a>
             </li>
             <li class="burger__list-link">
-              <a href="#outsourcing" data-link-burger>Аутсорсинг</a>
+              <a href="/#outsourcing" data-link-burger>Аутсорсинг</a>
             </li>
             <li class="burger__list-link">
-              <a href="#solution" data-link-burger>Этапы</a>
+              <a href="/#solution" data-link-burger>Этапы</a>
             </li>
             <li class="burger__list-link">
-              <a href="#development" data-link-burger>Разработка</a>
+              <a href="/#development" data-link-burger>Разработка</a>
             </li>
             <li class="burger__list-link">
-              <a href="#partners" data-link-burger>Партнеры</a>
+              <a href="/#partners" data-link-burger>Партнеры</a>
             </li>
             <li class="burger__list-link">
-              <a href="#solutions" data-link-burger>Решения</a>
+              <a href="/#solutions" data-link-burger>Решения</a>
             </li>
             <li class="burger__list-link">
-              <a href="#contacts" data-link-burger>Контакты</a>
+              <a href="/#contacts" data-link-burger>Контакты</a>
             </li>
           </ul>
 
@@ -73,17 +73,17 @@ get_header();
             /></a>
             <nav>
               <ul class="main_menu">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#soft">Софт</a></li>
-                <li><a href="#equipment">Оборудование</a></li>
-                <li><a href="#protect">Кибербезопасность</a></li>
-                <li><a href="#outsourcing">Аутсорсинг</a></li>
-                <li><a href="#solution">Этапы</a></li>
-                <li><a href="#development">Разработка</a></li>
-                <li><a href="#partners">Партнеры</a></li>
-                <li><a href="#solutions">Решения</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="/#about">О нас</a></li>
+                <li><a href="/#services">Услуги</a></li>
+                <li><a href="/#soft">Софт</a></li>
+                <li><a href="/#equipment">Оборудование</a></li>
+                <li><a href="/#protect">Кибербезопасность</a></li>
+                <li><a href="/#outsourcing">Аутсорсинг</a></li>
+                <li><a href="/#solution">Этапы</a></li>
+                <li><a href="/#development">Разработка</a></li>
+                <li><a href="/#partners">Партнеры</a></li>
+                <li><a href="/#solutions">Решения</a></li>
+                <li><a href="/#contacts">Контакты</a></li>
               </ul>
             </nav>
             <div class="wrap_btns">
@@ -97,7 +97,7 @@ get_header();
           </div>
         </div>
         <div class="mobile">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" />
+          <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" /></a>
           <button class="burger_btn" data-toggle-menu>
             <img
               src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn.svg"
@@ -1679,6 +1679,7 @@ get_header();
                 loop=""
                 playsinline=""
                 preload="none"
+				autoplay="autoplay"
                 data-autoplay="delay"
               >
                 <!-- десктоп -->

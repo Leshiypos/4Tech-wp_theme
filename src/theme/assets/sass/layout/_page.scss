@@ -49,7 +49,7 @@ header {
     .main_menu {
       @extend %flexRowNowrapSB;
       align-items: center;
-      gap: 40px;
+      gap: 45px;
       a {
         font-size: 14px;
         font-weight: 400;
@@ -185,6 +185,7 @@ header {
       bottom: 0;
       left: 0;
       margin: 0 16px 48px 55px;
+      width: 96%;
       .head_content {
         .pre_title {
           background-color: rgba(255, 255, 255, 0.03);
@@ -1905,6 +1906,23 @@ header {
     }
     .wrap_header {
       gap: 55px;
+      .main_menu {
+        gap: 45px;
+      }
+    }
+    @include desktop(1400) {
+      .wrap_header {
+        .main_menu {
+          gap: 40px;
+        }
+      }
+    }
+    @include desktop(1200) {
+      .wrap_header {
+        .main_menu {
+          gap: 35px;
+        }
+      }
     }
   }
 
@@ -1915,7 +1933,7 @@ header {
       @include fluid-font(35, 80);
 
       line-height: 94%;
-      max-width: 65%;
+      max-width: 68%;
     }
     .wrap_section {
       .wrap_content {
@@ -1924,6 +1942,11 @@ header {
             margin-bottom: 15px;
           }
         }
+      }
+    }
+    @include mobile {
+      h1 {
+        max-width: 100%;
       }
     }
     @include mobile(550) {
@@ -1952,6 +1975,50 @@ header {
           line-height: 100%;
           text-transform: lowercase;
         }
+        .four_steps {
+          .video_background {
+            width: auto;
+          }
+        }
+      }
+    }
+    @include desktop(1600) {
+      .head_content {
+        .title {
+          .four_steps {
+            .content {
+              img {
+                width: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include desktop(1400) {
+      .head_content {
+        .title {
+          .four_steps {
+            .content {
+              img {
+                width: 65px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include desktop(1200) {
+      .head_content {
+        .title {
+          .four_steps {
+            .content {
+              img {
+                width: 52px;
+              }
+            }
+          }
+        }
       }
     }
     @include mobile {
@@ -1959,6 +2026,32 @@ header {
         .title {
           h2 {
             font-size: 40px;
+          }
+          .four_steps {
+            .content {
+              img {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include mobile(500) {
+      .head_content {
+        .title {
+          .four_steps {
+            padding: 110px 0;
+          }
+        }
+      }
+      .main_content {
+        .col {
+          h3 {
+            font-size: 36px;
+          }
+          p {
+            font-size: 14px;
           }
         }
       }
@@ -3668,7 +3761,7 @@ footer {
     .single_solution {
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
+      align-items: flex-start;
       gap: 25px;
       width: 100%;
       max-width: 350px;
@@ -3837,7 +3930,7 @@ footer {
           position: relative;
           z-index: 1;
           font-size: 30px;
-          max-width: 260px;
+          max-width: 263px;
         }
       }
 
