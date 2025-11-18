@@ -1679,7 +1679,7 @@ get_header();
                 loop=""
                 playsinline=""
                 preload="none"
-				autoplay="autoplay"
+				autoplay="autoplay" 
                 data-autoplay="delay"
               >
                 <!-- десктоп -->

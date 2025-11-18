@@ -58,6 +58,9 @@ header {
         &.active {
           color: rgb(187, 66, 182);
         }
+        &:hover {
+          opacity: 0.7;
+        }
       }
       li {
         vertical-align: middle;
@@ -2966,11 +2969,16 @@ header {
 footer {
   margin-top: 150px;
   margin-bottom: 80px;
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
   .wrap {
     padding: 0 20px;
   }
   .head_footer {
-    margin-bottom: 84px;
+    margin-bottom: 0px;
   }
   .two_col {
     align-items: center;
@@ -2987,8 +2995,8 @@ footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        font-size: 18px;
-        @include fluid-font(12, 18);
+        font-size: 15px;
+        @include fluid-font(12, 15);
         letter-spacing: -0.03em;
         color: rgba(108, 108, 108, 1);
         max-width: 80%;
@@ -3011,6 +3019,7 @@ footer {
   // Низ футера
   .foot_footer {
     letter-spacing: -0.03em;
+    margin-bottom: 84px;
     .col {
       flex: 1;
       align-self: flex-start;
@@ -3018,22 +3027,22 @@ footer {
       .wrap_content {
         .label {
           font-weight: 500;
-          font-size: 18px;
-          @include fluid-font(12, 18);
+          font-size: 15px;
+          @include fluid-font(12, 15);
           color: rgba(255, 255, 255, 0.6);
           margin-bottom: 12px;
         }
         .content {
-          font-size: 25px;
-          @include fluid-font(14, 24);
-          font-weight: 400;
-          line-height: 132%;
-          letter-spacing: -0.03em;
-          color: #fff;
+          font-weight: 500;
+          font-size: 15px;
+          @include fluid-font(12, 15);
+          margin-bottom: 12px;
+          color: rgba(105, 105, 105, 1);
         }
       }
       &.office_address {
         flex: 1.3;
+        max-width: 215px;
       }
       &.flex_center {
         display: flex;
@@ -3042,14 +3051,14 @@ footer {
     }
     .col_info {
       .text_logo {
-        font-size: 18px;
-        @include fluid-font(12, 18);
+        font-size: 15px;
+        @include fluid-font(12, 15);
         font-weight: 700;
         margin-bottom: 12px;
       }
       .address {
-        font-size: 14px;
-        @include fluid-font(10, 14);
+        font-size: 15px;
+        @include fluid-font(10, 15);
         color: rgba(105, 105, 105, 1);
         line-height: 1.6;
         max-width: 185px;
@@ -3072,8 +3081,8 @@ footer {
         gap: 25px;
         color: rgba(103, 103, 103, 1);
         a {
-          font-size: 14px;
-          @include fluid-font(10, 14);
+          font-size: 15px;
+          @include fluid-font(10, 15);
         }
       }
     }
@@ -3104,7 +3113,7 @@ footer {
   @include desktop(1600) {
     margin-top: 130px;
     margin-bottom: 70px;
-    .head_footer {
+    .foot_footer {
       margin-bottom: 80px;
     }
     .col {
@@ -3147,7 +3156,7 @@ footer {
   @include desktop(1200) {
     margin-top: 90px;
     margin-bottom: 50px;
-    .head_footer {
+    .foot_footer {
       margin-bottom: 60px;
     }
     .col {
@@ -3176,7 +3185,7 @@ footer {
       .buttons_wrap {
         button {
           height: 42px;
-          font-size: 12px;
+          font-size: 14px;
           padding-right: 4px;
           width: 200px;
           img {
@@ -3203,7 +3212,7 @@ footer {
 
       a {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
         color: #6c6c6c;
       }
     }
@@ -3241,7 +3250,7 @@ footer {
       margin-top: 59px;
       margin-bottom: 62px;
       .title {
-        font-size: 16px;
+        font-size: 14px;
       }
       .descriptios {
         font-size: 14px;
@@ -3266,7 +3275,7 @@ footer {
       }
 
       a {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   }

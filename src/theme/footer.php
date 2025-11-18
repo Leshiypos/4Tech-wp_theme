@@ -4,6 +4,76 @@
 
     <footer>
       <div class="wrap">
+		        <div class="mobile_menu">
+          <ul>
+				<?php 
+					if (is_page_template( 'template-equipment.php' )){
+				?>
+					<li><a href="/office-equipment/">Оргтехника</a></li>
+					<li><a href="/licensed-software/">ПО</a></li>
+					<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
+					<li><a href="/it-services/">IT</a></li>
+				<?php
+					} else {
+				?>
+					<li><a href="#about">О нас</a></li>
+					<li><a href="#partners">Партнеты</a></li>
+					<li><a href="#services">Услуги</a></li>
+					<li><a href="#equipment">Оборудование</a></li>
+				<?php
+					}
+				?>
+          </ul>
+        </div>
+
+		<div class="foot_footer two_col">
+          <div class="col col_info fade_in">
+            <div class="wrap_content">
+              <div class="text_logo">4TECH LLC</div>
+              <div class="address">
+                Al. Bolestawa Krzywoustego 40-870 Katowice
+              </div>
+            </div>
+          </div>
+          <div class="col col_privacy_mobile fade_in">
+            <a href="">Политика обработки данных</a>
+          </div>
+          <div class="col fade_in flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">E-Mail</div>
+              <div class="content">
+                <a href="mailto: houserenov@renovation.com"
+                  >houserenov@renovation.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col fade_in flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">Phone number</div>
+              <div class="content">
+                <a href="tel: 7121111244">(712)-11-11-244</a>
+              </div>
+            </div>
+          </div>
+          <div class="col fade_in office_address flex_center desktop_visible">
+            <div class="wrap_content">
+              <div class="label">Main Office</div>
+              <div class="content">
+                Астана, ул. Дінмұхамед Қонаев, з.12/1, ВП 51, 010000
+              </div>
+            </div>
+          </div>
+
+          <div class="col col_privacy fade_in">
+            <ul>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Policy</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
         <div class="head_footer two_col">
           <div class="col logo fade_in">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_footer.webp" alt="logo" />
@@ -51,74 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="mobile_menu">
-          <ul>
-				<?php 
-					if (is_page_template( 'template-equipment.php' )){
-				?>
-					<li><a href="/office-equipment/">Оргтехника</a></li>
-					<li><a href="/licensed-software/">ПО</a></li>
-					<li><a href="/network_equipment/">Сетевое оборудование</a></li> 
-					<li><a href="/it-services/">IT</a></li>
-				<?php
-					} else {
-				?>
-					<li><a href="#about">О нас</a></li>
-					<li><a href="#partners">Партнеты</a></li>
-					<li><a href="#services">Услуги</a></li>
-					<li><a href="#equipment">Оборудование</a></li>
-				<?php
-					}
-				?>
-          </ul>
-        </div>
-        <div class="foot_footer two_col">
-          <div class="col col_info fade_in">
-            <div class="wrap_content">
-              <div class="text_logo">4TECH LLC</div>
-              <div class="address">
-                Al. Bolestawa Krzywoustego 40-870 Katowice
-              </div>
-            </div>
-          </div>
-          <div class="col col_privacy_mobile fade_in">
-            <a href="">Политика обработки данных</a>
-          </div>
-          <div class="col fade_in flex_center desktop_visible">
-            <div class="wrap_content">
-              <div class="label">E-Mail</div>
-              <div class="content">
-                <a href="mailto: houserenov@renovation.com"
-                  >houserenov@renovation.com</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col fade_in flex_center desktop_visible">
-            <div class="wrap_content">
-              <div class="label">Phone number</div>
-              <div class="content">
-                <a href="tel: 7121111244">(712)-11-11-244</a>
-              </div>
-            </div>
-          </div>
-          <div class="col fade_in office_address flex_center desktop_visible">
-            <div class="wrap_content">
-              <div class="label">Main Office</div>
-              <div class="content">
-                Астана, ул. Дінмұхамед Қонаев, з.12/1, ВП 51, 010000
-              </div>
-            </div>
-          </div>
 
-          <div class="col col_privacy fade_in">
-            <ul>
-              <li><a href="">Privacy</a></li>
-              <li><a href="">Policy</a></li>
-              <li><a href="">Terms & Conditions</a></li>
-            </ul>
-          </div>
-        </div>
         <div class="prodaction_block">
           <div class="wrap_prodaction">
             <a href="https://fernandes-media.com/" class="wrap_content">
