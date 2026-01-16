@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!input || !form) return;
 
     const iti = window.intlTelInput(input, {
-      initialCountry: "ru",
-      preferredCountries: ["by", "ru", "ua", "pl", "de"],
+      initialCountry: "kz",
+      preferredCountries: ["by", "ru", "ua", "pl", "de", "kz"],
       separateDialCode: true,
       nationalMode: true, // вводим национальный номер
       autoPlaceholder: "aggressive", // пример номера -> плейсхолдер
@@ -247,8 +247,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!input || !form) return;
 
     const iti = window.intlTelInput(input, {
-      initialCountry: "ru",
-      preferredCountries: ["by", "ru", "ua", "pl", "de"],
+      initialCountry: "kz",
+      preferredCountries: ["by", "ru", "ua", "pl", "de", "kz"],
       separateDialCode: true,
       nationalMode: true, // вводим национальный номер
       autoPlaceholder: "aggressive", // пример номера -> плейсхолдер
