@@ -728,22 +728,24 @@ header .mobile {
   .overyone_here_section .wrap_mobile {
     padding: 0 29px;
     display: none; }
-  .overyone_here_section .content h2 {
-    font-size: 50px;
-    font-size: clamp(30px, calc( 30px + (50 - 30) * ((100vw - 1000px) / (1900 - 1000)) ), 50px);
-    font-weight: 500;
-    margin-bottom: 34px;
-    letter-spacing: -0.03em;
-    max-width: 80%;
-    line-height: 102%; }
-  .overyone_here_section .content p {
-    max-width: 271px;
-    font-size: 16px;
-    font-size: clamp(10px, calc( 10px + (16 - 10) * ((100vw - 1000px) / (1900 - 1000)) ), 16px);
-    font-weight: 300;
-    line-height: 1.8;
-    letter-spacing: -0.03em;
-    margin-bottom: 34px; }
+  .overyone_here_section .content {
+    width: 33.7%; }
+    .overyone_here_section .content h2 {
+      font-size: 40px;
+      font-size: clamp(20px, calc( 20px + (40 - 20) * ((100vw - 1000px) / (1900 - 1000)) ), 40px);
+      font-weight: 500;
+      margin-bottom: 34px;
+      letter-spacing: -0.03em;
+      max-width: 78%;
+      line-height: 102%; }
+    .overyone_here_section .content p {
+      max-width: 271px;
+      font-size: 16px;
+      font-size: clamp(8px, calc( 8px + (16 - 8) * ((100vw - 1000px) / (1900 - 1000)) ), 16px);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: -0.03em;
+      margin-bottom: 34px; }
   .overyone_here_section .card {
     position: relative;
     border-radius: 20px;
@@ -751,20 +753,20 @@ header .mobile {
     cursor: pointer; }
     .overyone_here_section .card .card_content {
       position: absolute;
-      margin: 40px;
+      margin: 35px;
       bottom: 0;
       left: 0;
       z-index: 2;
-      max-width: 65%; }
+      max-width: 72%; }
       .overyone_here_section .card .card_content p {
         font-size: 14px;
-        font-size: clamp(10px, calc( 10px + (14 - 10) * ((100vw - 1000px) / (1900 - 1000)) ), 14px);
+        font-size: clamp(8px, calc( 8px + (14 - 8) * ((100vw - 1000px) / (1900 - 1000)) ), 14px);
         font-weight: 300;
         line-height: 1.8;
         letter-spacing: -0.03em; }
     .overyone_here_section .card h3 {
-      font-size: 30px;
-      font-size: clamp(16px, calc( 16px + (30 - 16) * ((100vw - 1000px) / (1900 - 1000)) ), 30px);
+      font-size: 24px;
+      font-size: clamp(12px, calc( 12px + (24 - 12) * ((100vw - 1000px) / (1900 - 1000)) ), 24px);
       font-weight: 500;
       margin-bottom: 8px;
       letter-spacing: -0.03em;
@@ -777,7 +779,7 @@ header .mobile {
       animation: hueShift 6s linear infinite; }
   @media screen and (min-width: 1001px) and (max-width: 1600px) {
     .overyone_here_section .card .card_content {
-      margin: 30px; }
+      margin: 25px; }
     .overyone_here_section .card .arrow_diag {
       width: 45px;
       top: 20px;
@@ -794,13 +796,18 @@ header .mobile {
       width: 30px;
       top: 15px;
       right: 12px; }
-    .overyone_here_section .content h2 {
-      margin-bottom: 28px; }
-    .overyone_here_section .content p {
-      margin-bottom: 28px; } }
+    .overyone_here_section .content {
+      width: 40%; }
+      .overyone_here_section .content h2 {
+        margin-bottom: 28px; }
+      .overyone_here_section .content p {
+        margin-bottom: 28px; } }
   @media screen and (min-width: 1001px) and (max-width: 1400px) {
     .overyone_here_section .card .card_content {
       max-width: 75%; } }
+  @media screen and (min-width: 1001px) and (max-width: 1400px) {
+    .overyone_here_section .content {
+      width: 45%; } }
   @media screen and (max-width: 1000px) {
     .overyone_here_section {
       display: block;
@@ -809,15 +816,17 @@ header .mobile {
       .overyone_here_section .wrap_section {
         flex-direction: column;
         margin: 0 29px; }
-      .overyone_here_section .content h2 {
-        font-size: 28px;
-        line-height: 1.2;
-        max-width: 100%; }
-      .overyone_here_section .content p {
-        font-size: 16px;
-        max-width: 100%; }
-      .overyone_here_section .content .leave_request {
-        display: none; }
+      .overyone_here_section .content {
+        width: 100%; }
+        .overyone_here_section .content h2 {
+          font-size: 28px;
+          line-height: 1.2;
+          max-width: 100%; }
+        .overyone_here_section .content p {
+          font-size: 16px;
+          max-width: 100%; }
+        .overyone_here_section .content .leave_request {
+          display: none; }
       .overyone_here_section .card .arrow_diag {
         width: 40px;
         top: 23px;

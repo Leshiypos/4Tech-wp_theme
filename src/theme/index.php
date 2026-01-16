@@ -83,10 +83,13 @@ get_header();
 					</ul>
 				</nav>
 				<div class="wrap_btns">
+					<?php /** 
 					<a href="#" class="leave_req_btn" data-dropdownmenu-open>
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
 							alt="leave a request" /></a>
+					 */
+					?>
 				</div>
 			</div>
 		</div>
@@ -268,7 +271,7 @@ get_header();
 		<div class="wrap_section">
 			<div class="column content">
 				<h2 class="fade_in">
-					Все в одном месте - от ПО до облачных серверов
+					Все в одном <br> месте - от ПО <br> до облачных <br> серверов
 				</h2>
 				<p class="fade_in">
 					У нас вы найдёте всё для построения эффективной IT-инфраструктуры:
@@ -283,7 +286,26 @@ get_header();
 						alt="button" />
 				</button>
 			</div>
-			<div class="column card fade_in desktop">
+
+			<a href="/it-services" class="column card fade_in desktop">
+				<img
+					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+					class="arrow_diag"
+					alt="" />
+				<img
+					src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compAnfComp.webp"
+					class="cover"
+					alt="components" />
+				<div class="card_content fade_in">
+					<h3>
+						IT <br />
+						услуги
+					</h3>
+					<p>Поддержка бизнесв 24/7 в любой точке мира</p>
+				</div>
+			</a>
+
+			<a href="/office-equipment" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -299,9 +321,9 @@ get_header();
 					</h3>
 					<p>Надёжная техника для стабильной работы вашей команды</p>
 				</div>
-			</div>
+			</a>
 
-			<div class="column card fade_in desktop">
+			<a href="/network_equipment" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -319,9 +341,9 @@ get_header();
 						Мощные решения для бесперебойной работы вашей инфраструктуры
 					</p>
 				</div>
-			</div>
+			</a>
 
-			<div class="column card fade_in desktop">
+			<a href="/licensed-software" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -337,13 +359,31 @@ get_header();
 					</h3>
 					<p>Безопасное и масштабируемое хранение ваших данных</p>
 				</div>
-			</div>
+			</a>
 		</div>
 		<!-- начало слайдера -->
 		<div class="wrap_mobile">
 			<div class="swiper overyone_here_slider">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide card fade_in">
+					<a href="/it-services" class="swiper-slide card fade_in">
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							class="arrow_diag"
+							alt="" />
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compAnfComp.webp"
+							class="cover"
+							alt="components" />
+						<div class="card_content fade_in">
+							<h3>
+								IT <br />
+								услуги
+							</h3>
+							<p>Поддержка бизнесв 24/7 в любой точке мира</p>
+						</div>
+					</a>
+
+					<a href="/office-equipment" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -359,9 +399,9 @@ get_header();
 							</h3>
 							<p>Надёжная техника для стабильной работы вашей команды</p>
 						</div>
-					</div>
+					</a>
 
-					<div class="swiper-slide card fade_in">
+					<a href="/network_equipment" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -379,9 +419,9 @@ get_header();
 								Мощные решения для бесперебойной работы вашей инфраструктуры
 							</p>
 						</div>
-					</div>
+					</a>
 
-					<div class="swiper-slide card fade_in">
+					<a href="/licensed-software" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -397,7 +437,7 @@ get_header();
 							</h3>
 							<p>Безопасное и масштабируемое хранение ваших данных</p>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
