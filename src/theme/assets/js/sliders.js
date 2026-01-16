@@ -189,6 +189,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // MARK: Если не работает gorizontalSwiper() -> включаем solutionSwiperInit()
+  function solutionSwiperInit() {
+    // Слайдер Комплексные решения
+    // Инициализация Swiper (если у тебя уже инициализируется, просто возьми reference)
+    const slider = document.querySelector(".solution-slider");
+    if (!slider) return;
+
+    const swiper =
+      slider.swiper ||
+      new Swiper(slider, {
+        speed: 400,
+        slidesPerView: 1,
+        spaceBetween: 15,
+        allowTouchMove: true, // на десктопе/широких разрешениях можно оставить свайп
+        breakpoints: {
+          1001: {
+            slidesPerView: 4,
+            allowTouchMove: true,
+          },
+        },
+      });
+  }
   //   Секция Все в одном месте
   function initOveryoneHere() {
     const section = document.querySelector("#services.overyone_here_section");
@@ -247,6 +269,22 @@ document.addEventListener("DOMContentLoaded", () => {
         swiper.allowTouchMove = true;
       };
     });
+  }
+  // MARK: Если не работает initOveryoneHere() -> включаем overyoneHereSwiperInit()
+  function overyoneHereSwiperInit() {
+    const section = document.querySelector("#services.overyone_here_section");
+    const swiperEl = section?.querySelector(".overyone_here_slider");
+    if (!section || !swiperEl) return;
+
+    // Инициализируем Swiper (без повторной инициализации)
+    const swiper =
+      swiperEl.swiper ||
+      new Swiper(swiperEl, {
+        speed: 400,
+        slidesPerView: 1,
+        spaceBetween: 14,
+        allowTouchMove: true, // на десктопе/широких разрешениях можно оставить свайп
+      });
   }
 
   //   Слайдер Партнеры
@@ -360,10 +398,13 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     });
   }
+
   if (window.innerWidth < 1001) {
-    initOveryoneHere();
-    gorizontalSwiper();
-    partnersGorizontalSliders();
+    // initOveryoneHere();
+    // gorizontalSwiper();
+    // partnersGorizontalSliders();
+    solutionSwiperInit();
+    overyoneHereSwiperInit();
   }
   fadeInAnimation(".fade_in");
   fadeInAnimation(".fade_in_fast", 95);
