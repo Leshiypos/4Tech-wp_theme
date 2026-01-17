@@ -293,7 +293,7 @@ get_header();
 					class="arrow_diag"
 					alt="" />
 				<img
-					src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compAnfComp.webp"
+					src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compItServices.webp"
 					class="cover"
 					alt="components" />
 				<div class="card_content fade_in">
@@ -371,7 +371,7 @@ get_header();
 							class="arrow_diag"
 							alt="" />
 						<img
-							src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compAnfComp.webp"
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/bg_card_compItServices.webp"
 							class="cover"
 							alt="components" />
 						<div class="card_content fade_in">
