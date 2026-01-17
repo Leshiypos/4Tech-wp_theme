@@ -228,6 +228,14 @@ a {
       width: 44px; }
     .btn_hs.footer p {
       margin-left: 20px; }
+  .btn_hs.just_img {
+    width: fit-content;
+    height: auto;
+    padding: 0;
+    background: transparent; }
+    @media screen and (max-width: 1000px) {
+      .btn_hs.just_img {
+        display: none; } }
   @media screen and (min-width: 1001px) and (max-width: 1600px) {
     .btn_hs {
       height: 50px;
@@ -297,6 +305,30 @@ a {
     filter: hue-rotate(180deg); }
   100% {
     filter: hue-rotate(360deg); } }
+.whatsap_buttom {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  transition: opacity 0.3s ease; }
+  .whatsap_buttom img {
+    width: 50px; }
+  .whatsap_buttom.hidden {
+    opacity: 0;
+    pointer-events: none; }
+  @media screen and (min-width: 1001px) and (max-width: 1600px) {
+    .whatsap_buttom img {
+      width: 40px; } }
+  @media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .whatsap_buttom img {
+      width: 30px; } }
+  @media screen and (max-width: 1000px) {
+    .whatsap_buttom {
+      bottom: 20px;
+      right: 20px; }
+      .whatsap_buttom img {
+        width: 50px; } }
+
 .rating_block {
   position: relative;
   width: 137px;

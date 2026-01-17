@@ -160,8 +160,8 @@ get_header();
 					<div class="right_col">
 						<a href="#about">
 
-							<button class="btn_hs transporent down">
-								<p>Листайте вниз</p>
+							<button class="btn_hs down just_img">
+								<!-- <p>Листайте вниз</p> -->
 								<img
 									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_down_w.svg"
 									alt="arrow in circle" />

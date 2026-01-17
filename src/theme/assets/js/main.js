@@ -49,6 +49,20 @@ function faqInit() {
   });
 }
 
+function hideButtonIfNeeded() {
+  let btn = document.querySelector(".whatsap_buttom");
+  if (!btn) return;
+
+  const chekDocumenPosition = (positionActivate = 200) => {
+    return window.scrollY < positionActivate;
+  };
+  window.addEventListener("scroll", () => {
+    chekDocumenPosition()
+      ? btn.classList.add("hidden")
+      : btn.classList.remove("hidden");
+  });
+}
+
 // Меню Desktop
 
 function burgerMenuDesctopInit() {
@@ -393,6 +407,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //   DropDown Desktop menu
   burgerMenuDesctopInit();
+
+  //Скрытие кноки whatsapp
+  hideButtonIfNeeded();
 });
 
 // отложенный загрузка  видер

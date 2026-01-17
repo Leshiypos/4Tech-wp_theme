@@ -126,6 +126,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="whatsap_buttom hidden">
+		<a href="https://wa.me/971521344198?text=Hello%2C%20I%20would%20like%20to%20get%20legal%20consultation%20about%20my%20case.%20(EN-LAWHUB)" class="widget">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/what_sapp.png" alt="">
+		</a>
+	</div>
 </footer>
 
 <div id="popup-overlay" class="hidden">
