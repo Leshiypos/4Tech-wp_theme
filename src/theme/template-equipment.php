@@ -85,10 +85,13 @@ get_header();
 					</ul>
 				</nav>
 				<div class="wrap_btns">
+					<?php /**
 					<a href="#" class="leave_req_btn" data-dropdownmenu-open>
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
-							alt="leave a request" /></a>
+							alt="leave a request" />
+					</a>
+					 */ ?>
 				</div>
 			</div>
 		</div>
@@ -142,7 +145,7 @@ get_header();
 						</button>
 					</div>
 					<div class="right_col">
-						<a href="#about">
+						<a href="#solution">
 
 							<button class="btn_hs down just_img">
 								<!-- <p>Листайте вниз</p> -->
