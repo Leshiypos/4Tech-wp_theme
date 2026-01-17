@@ -1,3 +1,9 @@
+<?php
+$it_services_url = get_permalink(pll_get_post(118));
+$office_equipmen_url = get_permalink(pll_get_post(65));
+$network_equipment_url = get_permalink(pll_get_post(104));
+$licensed_software_url = get_permalink(pll_get_post(84));
+?>
 <footer>
 	<div class="wrap">
 		<div class="mobile_menu">
@@ -5,10 +11,10 @@
 				<?php
 				if (is_page_template('template-equipment.php')) {
 				?>
-					<li><a href="/office-equipment/"><?php pll_e("Оргтехника"); ?></a></li>
-					<li><a href="/licensed-software/"><?php pll_e("ПО"); ?></a></li>
-					<li><a href="/network_equipment/"><?php pll_e("Сетевое оборудование"); ?></a></li>
-					<li><a href="/it-services/">IT</a></li>
+					<li><a href="<?php echo $office_equipmen_url; ?>"><?php pll_e("Оргтехника"); ?></a></li>
+					<li><a href="<?php echo $licensed_software_url; ?>"><?php pll_e("ПО"); ?></a></li>
+					<li><a href="<?php echo $network_equipment_url; ?>"><?php pll_e("Сетевое оборудование"); ?></a></li>
+					<li><a href="<?php echo $it_services_url; ?>">IT</a></li>
 				<?php
 				} else {
 				?>
@@ -78,10 +84,10 @@
 					<?php
 					if (is_page_template('template-equipment.php')) {
 					?>
-						<li><a href="/office-equipment/"><?php pll_e("Оргтехника"); ?></a></li>
-						<li><a href="/licensed-software/"><?php pll_e("Лицензионное ПО"); ?></a></li>
-						<li><a href="/network_equipment/"><?php pll_e("Сетевое оборудование"); ?></a></li>
-						<li><a href="/it-services/"><?php pll_e("IT-услуги"); ?></a></li>
+						<li><a href="<?php echo $office_equipmen_url; ?>"><?php pll_e("Оргтехника"); ?></a></li>
+						<li><a href="<?php echo $licensed_software_url; ?>"><?php pll_e("Лицензионное ПО"); ?></a></li>
+						<li><a href="<?php echo $network_equipment_url; ?>"><?php pll_e("Сетевое оборудование"); ?></a></li>
+						<li><a href="<?php echo $it_services_url; ?>"><?php pll_e("IT-услуги"); ?></a></li>
 						<li><a href="#contacts"><?php pll_e("Контакты"); ?></a></li>
 					<?php
 					} else {
