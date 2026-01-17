@@ -9,6 +9,12 @@ Template post type: page
 <?php
 
 get_header();
+
+// Получаем ссылки на лендинги
+$it_services_url = get_permalink(pll_get_post(118));
+$office_equipmen_url = get_permalink(pll_get_post(65));
+$network_equipment_url = get_permalink(pll_get_post(104));
+$licensed_software_url = get_permalink(pll_get_post(84));
 ?>
 
 <main>
@@ -281,7 +287,7 @@ get_header();
 				</button>
 			</div>
 
-			<a href="/it-services" class="column card fade_in desktop">
+			<a href="<?php echo $it_services_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -298,7 +304,7 @@ get_header();
 				</div>
 			</a>
 
-			<a href="/office-equipment" class="column card fade_in desktop">
+			<a href="<?php echo $office_equipmen_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -315,7 +321,7 @@ get_header();
 				</div>
 			</a>
 
-			<a href="/network_equipment" class="column card fade_in desktop">
+			<a href="<?php echo $network_equipment_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -334,7 +340,7 @@ get_header();
 				</div>
 			</a>
 
-			<a href="/licensed-software" class="column card fade_in desktop">
+			<a href="<?php echo $licensed_software_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -355,7 +361,7 @@ get_header();
 		<div class="wrap_mobile">
 			<div class="swiper overyone_here_slider">
 				<div class="swiper-wrapper">
-					<a href="/it-services" class="swiper-slide card fade_in">
+					<a href="<?php echo $it_services_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -372,7 +378,7 @@ get_header();
 						</div>
 					</a>
 
-					<a href="/office-equipment" class="swiper-slide card fade_in">
+					<a href="<?php echo $office_equipmen_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -389,7 +395,7 @@ get_header();
 						</div>
 					</a>
 
-					<a href="/network_equipment" class="swiper-slide card fade_in">
+					<a href="<?php echo $network_equipment_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -408,7 +414,7 @@ get_header();
 						</div>
 					</a>
 
-					<a href="/licensed-software" class="swiper-slide card fade_in">
+					<a href="<?php echo $licensed_software_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
