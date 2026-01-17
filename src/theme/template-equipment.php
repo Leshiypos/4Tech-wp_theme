@@ -24,37 +24,37 @@ get_header();
 			<div></div>
 			<ul class="burger__list">
 				<li class="burger__list-link">
-					<a href="/#about" data-link-burger>О нас</a>
+					<a href="/#about" data-link-burger><?php pll_e("О нас"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#services" data-link-burger>Услуги</a>
+					<a href="/#services" data-link-burger><?php pll_e("Услуги"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#soft" data-link-burger>Софт</a>
+					<a href="/#soft" data-link-burger><?php pll_e("Софт"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#equipment" data-link-burger>Оборудование</a>
+					<a href="/#equipment" data-link-burger><?php pll_e("Оборудование"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#protect" data-link-burger>Кибербезопасность</a>
+					<a href="/#protect" data-link-burger><?php pll_e("Кибербезопасность"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#outsourcing" data-link-burger>Аутсорсинг</a>
+					<a href="/#outsourcing" data-link-burger><?php pll_e("Аутсорсинг"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#solution" data-link-burger>Этапы</a>
+					<a href="/#solution" data-link-burger><?php pll_e("Этапы"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#development" data-link-burger>Разработка</a>
+					<a href="/#development" data-link-burger><?php pll_e("Разработка"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#partners" data-link-burger>Партнеры</a>
+					<a href="/#partners" data-link-burger><?php pll_e("Партнеры"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#solutions" data-link-burger>Решения</a>
+					<a href="/#solutions" data-link-burger><?php pll_e("Решения"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#contacts" data-link-burger>Контакты</a>
+					<a href="/#contacts" data-link-burger><?php pll_e("Контакты"); ?></a>
 				</li>
 			</ul>
 
@@ -62,7 +62,7 @@ get_header();
 				<button
 					class="btn_hs leave_request mobile_full_width"
 					data-open-popup>
-					<p>Оставить заявку</p>
+					<p><?php pll_e("Оставить заявку"); ?></p>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 						alt="button" />
@@ -77,10 +77,10 @@ get_header();
 				<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" /></a>
 				<nav>
 					<ul class="main_menu">
-						<li><a href="/office-equipment/">Оргтехника</a></li>
-						<li><a href="/licensed-software/">Лицензионное ПО</a></li>
-						<li><a href="/network_equipment/">Сетевое оборудование</a></li>
-						<li><a href="/it-services/">IT-услуги</a></li>
+						<li><a href="/office-equipment/"><?php pll_e("Оргтехника"); ?></a></li>
+						<li><a href="/licensed-software/"><?php pll_e("Лицензионное ПО"); ?></a></li>
+						<li><a href="/network_equipment/"><?php pll_e("Сетевое оборудование"); ?></a></li>
+						<li><a href="/it-services/"><?php pll_e("IT-услуги"); ?></a></li>
 
 					</ul>
 				</nav>
@@ -132,13 +132,13 @@ get_header();
 				<div class="foot_content two_col">
 					<div class="left_col">
 						<button class="btn_hs white" data-open-popup>
-							<p>Оставить заявку</p>
+							<p><?php pll_e("Оставить заявку"); ?></p>
 							<img
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_bl.svg"
 								alt="arrow in circle" />
 						</button>
 						<button class="btn_hs transporent" data-open-popup>
-							<p>Узнать больше</p>
+							<p><?php pll_e("Узнать больше"); ?></p>
 							<img
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_w.svg"
 								alt="arrow in circle" />
@@ -174,8 +174,7 @@ get_header();
 				<div class="head_content">
 					<div class="title">
 						<h2 class="fade_in">
-							комплексное решение по внедрению <br />
-							IT архитектуры в вашу компанию
+							<?php pll_e("комплексное решение по внедрению <br />IT архитектуры в вашу компанию"); ?>
 						</h2>
 						<div class="four_steps fade_in">
 							<video
@@ -209,8 +208,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
 								alt="logo-section" />
 							<div class="description">
-								Поломки техники, нехватка расходников, завышенные цены — мы
-								решаем эти задачи.
+								<?php pll_e("Поломки техники, нехватка расходников, завышенные цены — мы решаем эти задачи."); ?>
 							</div>
 						</div>
 					</div>
@@ -221,14 +219,11 @@ get_header();
 					<div class="solutions_desktop">
 						<div class="col text">
 							<h3 class="fade_in">
-								полный <br />
-								аудит
+								<?php pll_e("полный <br />аудит"); ?>
 							</h3>
 							<p class="fade_in">
-								Проводим глубокую оценку текущей IT-инфраструктуры, выявляем
-								технические и бизнес-проблемы, определяем зоны риска и
-								формируем основу для цифровой трансформации.
-							</p>
+								<?php pll_e("Проводим глубокую оценку текущей IT-инфраструктуры, выявляем технические и бизнес-проблемы, определяем зоны риска и формируем основу для цифровой трансформации.
+							</p>"); ?>
 						</div>
 						<div class="col img">
 							<img
@@ -238,13 +233,10 @@ get_header();
 						</div>
 						<div class="col text">
 							<h3 class="fade_in">
-								создание <br />
-								концепции
+								<?php pll_e("создание <br />концепции"); ?>
 							</h3>
 							<p class="fade_in">
-								Разрабатываем стратегический план развития IT-системы под
-								задачи бизнеса: от архитектуры решений до оптимального набора
-								технологий и инструментов.
+								<?php pll_e("Разрабатываем стратегический план развития IT-системы под задачи бизнеса: от архитектуры решений до оптимального набора технологий и инструментов."); ?>
 							</p>
 						</div>
 						<div class="col img">
@@ -255,13 +247,10 @@ get_header();
 						</div>
 						<div class="col text">
 							<h3 class="fade_in">
-								обоснование <br />
-								внедрения IT
+								<?php pll_e("обоснование <br />внедрения IT"); ?>
 							</h3>
 							<p class="fade_in">
-								Готовим обоснование с расчётами эффективности, сроков и
-								бюджета внедрения. Согласовываем подходящие решения и
-								прогнозируем результат в цифрах.
+								<?php pll_e("Готовим обоснование с расчётами эффективности, сроков и бюджета внедрения. Согласовываем подходящие решения и прогнозируем результат в цифрах."); ?>
 							</p>
 						</div>
 						<div class="col img">
@@ -269,13 +258,10 @@ get_header();
 						</div>
 						<div class="col text">
 							<h3 class="fade_in">
-								внедрение <br />
-								технологии
+								<?php pll_e("внедрение <br />технологии"); ?>
 							</h3>
 							<p class="fade_in">
-								Внедряем технологии с учётом всех этапов — поставка,
-								настройка, интеграция, обучение и поддержка. Гарантируем
-								стабильную работу и измеримый эффект.
+								<?php pll_e("Внедряем технологии с учётом всех этапов — поставка,	настройка, интеграция, обучение и поддержка. Гарантируем стабильную работу и измеримый эффект."); ?>
 							</p>
 						</div>
 					</div>
@@ -286,11 +272,9 @@ get_header();
 							<div class="swiper-slide">
 								<div class="two_column">
 									<div class="col text">
-										<h3 class="fade_in">полный аудит</h3>
+										<h3 class="fade_in"><?php pll_e("полный аудит"); ?></h3>
 										<p class="fade_in">
-											Проводим глубокую оценку текущей IT-инфраструктуры,
-											выявляем технические и бизнес-проблемы, определяем зоны
-											риска и формируем основу для цифровой трансформации.
+											<?php pll_e("Проводим глубокую оценку текущей IT-инфраструктуры,	выявляем технические и бизнес-проблемы, определяем зоны риска и формируем основу для цифровой трансформации."); ?>
 										</p>
 									</div>
 									<div class="col img">
@@ -304,11 +288,9 @@ get_header();
 							<div class="swiper-slide">
 								<div class="two_column">
 									<div class="col text">
-										<h3 class="fade_in">создание концепции</h3>
+										<h3 class="fade_in"><?php pll_e("создание концепции"); ?></h3>
 										<p class="fade_in">
-											Разрабатываем стратегический план развития IT-системы
-											под задачи бизнеса: от архитектуры решений до
-											оптимального набора технологий и инструментов.
+											<?php pll_e("Разрабатываем стратегический план развития IT-системы под задачи бизнеса: от архитектуры решений до оптимального набора технологий и инструментов."); ?>
 										</p>
 									</div>
 									<div class="col img">
@@ -322,11 +304,9 @@ get_header();
 							<div class="swiper-slide fade_in">
 								<div class="two_column">
 									<div class="col text">
-										<h3 class="fade_in">обоснование внедрения IT</h3>
+										<h3 class="fade_in"><?php pll_e("обоснование внедрения IT"); ?></h3>
 										<p class="fade_in">
-											Готовим обоснование с расчётами эффективности, сроков и
-											бюджета внедрения. Согласовываем подходящие решения и
-											прогнозируем результат в цифрах.
+											<?php pll_e("Готовим обоснование с расчётами эффективности, сроков и бюджета внедрения. Согласовываем подходящие решения и прогнозируем результат в цифрах."); ?>
 										</p>
 									</div>
 									<div class="col img">
@@ -340,11 +320,9 @@ get_header();
 							<div class="swiper-slide">
 								<div class="two_column">
 									<div class="col text last">
-										<h3 class="fade_in">внедрение технологии</h3>
+										<h3 class="fade_in"><?php pll_e("внедрение технологии"); ?></h3>
 										<p class="fade_in">
-											Внедряем технологии с учётом всех этапов — поставка,
-											настройка, интеграция, обучение и поддержка. Гарантируем
-											стабильную работу и измеримый эффект.
+											<?php pll_e("Внедряем технологии с учётом всех этапов — поставка, настройка, интеграция, обучение и поддержка. Гарантируем стабильную работу и измеримый эффект."); ?>
 										</p>
 									</div>
 									<div class="col img">
@@ -457,7 +435,7 @@ get_header();
 	<section class="catalog_equipment_section">
 		<div class="wrap_section">
 			<div class="head_content fade_in">
-				<h2>Каталог</h2>
+				<h2><?php pll_e("Каталог"); ?></h2>
 			</div>
 			<div class="main_content">
 
@@ -478,7 +456,7 @@ get_header();
 						</div>
 						<div class="btn_block">
 							<button class="btn_hs white" data-open-popup="">
-								<p>Запросить цену</p>
+								<p><?php pll_e("Запросить цену"); ?></p>
 								<img
 									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_bl.svg"
 									alt="arrow in circle" />
@@ -636,7 +614,7 @@ get_header();
 		<section class="reviews_clients_section">
 			<div class="wrap_section">
 				<div class="head_content fade_in">
-					<h2>Отзывы клиентов</h2>
+					<h2><?php pll_e("Отзывы клиентов"); ?></h2>
 				</div>
 				<div class="reviews_block">
 					<!-- Одиночный отзыв -->
@@ -784,7 +762,7 @@ get_header();
 								<button
 									class="btn_hs leave_request fade_in mobile_full_width"
 									type="submit">
-									<p>Оставить заявку</p>
+									<p><?php pll_e("Оставить заявку"); ?></p>
 									<img
 										src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 										alt="button" />
@@ -794,7 +772,7 @@ get_header();
 						} else {
 						?>
 							<button class="btn_hs leave_request fade_in write_whatsap mobile_full_width btn_margin_bot" data-open-popup>
-								<p>Написать в WhatsApp</p>
+								<p><?php pll_e("Написать в"); ?> WhatsApp</p>
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg" alt="" />
 							</button>
 						<?php
@@ -807,7 +785,7 @@ get_header();
 							<div>
 								<div class="stat">11+</div>
 								<div class="description_stat">
-									Лет поставляем решения в сфере IT-технологий
+									<?php pll_e("Лет поставляем решения в сфере IT-технологий"); ?>
 								</div>
 							</div>
 						</div>
@@ -815,7 +793,7 @@ get_header();
 							<div>
 								<div class="stat">50+</div>
 								<div class="description_stat">
-									Компаний-партнеров, известных по всему миру
+									<?php pll_e("Компаний-партнеров, известных по всему миру"); ?>
 								</div>
 							</div>
 						</div>
@@ -823,7 +801,7 @@ get_header();
 							<div>
 								<div class="stat">70+</div>
 								<div class="description_stat">
-									Довольных и постоянных клиентов по всему миру
+									<?php pll_e("Довольных и постоянных клиентов по всему миру"); ?>
 								</div>
 							</div>
 						</div>

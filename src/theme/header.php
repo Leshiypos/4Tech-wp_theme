@@ -32,10 +32,10 @@
 
 			</div>
 			<ul class="links_page">
-				<li><a href="/office-equipment/">Оргтехника</a></li>
-				<li><a href="/licensed-software/">Лицензионное ПО</a></li>
-				<li><a href="/network_equipment/">Сетевое оборудование</a></li>
-				<li><a href="/it-services/">IT-услуги</a></li>
+				<li><a href="/office-equipment/"> <?php pll_e("Оргтехника"); ?> </a></li>
+				<li><a href="/licensed-software/"><?php pll_e("Лицензионное ПО"); ?></a></li>
+				<li><a href="/network_equipment/"><?php pll_e("Сетевое оборудование"); ?></a></li>
+				<li><a href="/it-services/"><?php pll_e("IT-услуги"); ?></a></li>
 			</ul>
 		</div>
 	</div>
