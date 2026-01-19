@@ -21,6 +21,15 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 	<nav id="burger-menu" class="menu_mobile">
 		<div class="head_burger">
 			<img class="logo_burger" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo" />
+			<div class="lang_switcher">
+				<?php
+				$polylang_args = [
+					"dropdown" => 1,
+					"display_names_as" => "slug"
+				];
+				pll_the_languages($polylang_args);
+				?>
+			</div>
 			<button class="close_menu" data-toggle-menu>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cross.svg" alt="Закрыть меню" />
 			</button>
@@ -96,7 +105,9 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
 							alt="leave a request" />
 					</a>
-					 */ ?>
+					 */
+					pll_the_languages($polylang_args);
+					?>
 				</div>
 			</div>
 		</div>

@@ -472,6 +472,16 @@ header .desktop {
       font-weight: 400; }
       header .desktop .wrap_btns .leave_req_btn img {
         margin-top: 3px; }
+    header .desktop .wrap_btns select {
+      font-size: 14px;
+      color: white;
+      background: transparent;
+      border: none; }
+      header .desktop .wrap_btns select option {
+        font-size: 14px;
+        color: black;
+        background: transparent;
+        border: none; }
 header .mobile {
   display: none;
   align-items: center;
@@ -506,6 +516,8 @@ header .mobile {
     header .desktop .wrap_header .main_menu a {
       font-size: 12px; }
   header .desktop .wrap_btns .leave_req_btn {
+    font-size: 12px; }
+  header .desktop .wrap_btns select {
     font-size: 12px; } }
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
   header .desktop .wrap_btns .leave_req_btn {
@@ -517,7 +529,9 @@ header .mobile {
     header .desktop .wrap_header .main_menu {
       gap: 13px; }
       header .desktop .wrap_header .main_menu a {
-        font-size: 10px; } }
+        font-size: 10px; }
+    header .desktop .wrap_header .wrap_btns select {
+      font-size: 10px; } }
 @media screen and (max-width: 1000px) {
   header .desktop {
     display: none; }
@@ -2758,6 +2772,13 @@ footer {
       transition: opacity 0.3s; }
       .menu_mobile .head_burger button:hover {
         opacity: 1; }
+    .menu_mobile .head_burger .lang_switcher select {
+      font-size: 25px;
+      background: transparent;
+      border: none;
+      color: white; }
+      .menu_mobile .head_burger .lang_switcher select option {
+        color: black; }
   .menu_mobile .wrap_content {
     height: 100%;
     display: flex;
