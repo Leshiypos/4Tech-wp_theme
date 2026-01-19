@@ -20,7 +20,8 @@ get_header();
 				<?php
 				$polylang_args = [
 					"dropdown" => 1,
-					"display_names_as" => "slug"
+					"display_names_as" => "slug",
+					"id" => "lang_1"
 				];
 				pll_the_languages($polylang_args);
 				?>

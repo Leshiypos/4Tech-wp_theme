@@ -85,6 +85,18 @@ function burgerMenuDesctopInit() {
   });
 }
 
+// Инициализация кнопок переключения зыков
+function initSwitcherButtons() {
+  let switchers = document.querySelectorAll(".pll-switcher-select");
+  if (switchers) {
+    switchers.forEach((element) => {
+      element.addEventListener("change", function (event) {
+        location.href = event.currentTarget.value;
+      });
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // preloader
 
@@ -361,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sendForm(
         "custom-contact-form-popup",
         "form-message_popup",
-        "custom_contact_form_popup"
+        "custom_contact_form_popup",
       );
     });
   })();
@@ -410,6 +422,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Скрытие кноки whatsapp
   hideButtonIfNeeded();
+
+  //   Инициализация переключателей языков
+  initSwitcherButtons();
 });
 
 // отложенный загрузка  видер
