@@ -133,7 +133,7 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 		</div>
 	</div>
 	<div class="whatsap_buttom hidden">
-		<a href="https://wa.me/971521344198?text=Hello%2C%20I%20would%20like%20to%20get%20legal%20consultation%20about%20my%20case.%20(EN-LAWHUB)" class="widget">
+		<a href="https://wa.me/77000245310?text=Hello%2C%20I%20would%20like%20to%20get%20legal%20consultation%20about%20my%20case.%20(EN-LAWHUB)" class="widget">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/what_sapp.png" alt="">
 		</a>
 	</div>
@@ -178,7 +178,7 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 								name="number_visible"
 								inputmode="tel"
 								autocomplete="tel"
-								placeholder="Ваш телефон"
+								placeholder="777 777 77 77"
 								required />
 							<input
 								type="hidden"

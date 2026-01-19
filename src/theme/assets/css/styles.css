@@ -476,12 +476,17 @@ header .desktop {
       font-size: 14px;
       color: white;
       background: transparent;
-      border: none; }
+      border: none;
+      border-radius: 5px; }
       header .desktop .wrap_btns select option {
         font-size: 14px;
-        color: black;
         background: transparent;
+        border: none;
+        background-color: black;
+        border-radius: 10px;
         border: none; }
+        header .desktop .wrap_btns select option:hover {
+          background-color: #2b2b2b; }
 header .mobile {
   display: none;
   align-items: center;
@@ -2202,6 +2207,11 @@ header .mobile {
       width: 100%; }
       .contact_form_section .form_wrap .form-phone .iti__selected-country {
         padding-left: 20px; }
+      .contact_form_section .form_wrap .form-phone .iti--allow-dropdown .iti__country-container {
+        transform: translateY(-1px); }
+        @media screen and (max-width: 1000px) {
+          .contact_form_section .form_wrap .form-phone .iti--allow-dropdown .iti__country-container {
+            transform: translateY(-2px); } }
       .contact_form_section .form_wrap .form-phone .iti--inline-dropdown .iti__dropdown-content {
         background-color: black;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2776,9 +2786,10 @@ footer {
       font-size: 25px;
       background: transparent;
       border: none;
-      color: white; }
+      color: white;
+      border-radius: 5px; }
       .menu_mobile .head_burger .lang_switcher select option {
-        color: black; }
+        background-color: black; }
   .menu_mobile .wrap_content {
     height: 100%;
     display: flex;

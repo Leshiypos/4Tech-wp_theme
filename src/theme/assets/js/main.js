@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       preferredCountries: ["by", "ru", "ua", "pl", "de", "kz"],
       separateDialCode: true,
       nationalMode: true, // вводим национальный номер
-      autoPlaceholder: "aggressive", // пример номера -> плейсхолдер
+      autoPlaceholder: "off", // пример номера -> плейсхолдер
       formatOnDisplay: true,
       useFullscreenPopup: false,
       // важно: та же UMD-версия utils, что и в index.html

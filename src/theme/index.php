@@ -1524,7 +1524,7 @@ get_header();
 										name="number_visible"
 										inputmode="tel"
 										autocomplete="tel"
-										placeholder="Ваш телефон"
+										placeholder="777 777 77 77"
 										required />
 									<input type="hidden" name="phone_e164" id="phone_e164" />
 								</label>

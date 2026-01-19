@@ -85,11 +85,17 @@ header {
         color: white;
         background: transparent;
         border: none;
+        border-radius: 5px;
         option {
           font-size: 14px;
-          color: black;
           background: transparent;
           border: none;
+          background-color: black;
+          border-radius: 10px;
+          border: none;
+          &:hover {
+            background-color: rgb(43, 43, 43);
+          }
         }
       }
     }
@@ -2755,6 +2761,14 @@ header {
       .iti__selected-country {
         padding-left: 20px;
       }
+
+      .iti--allow-dropdown .iti__country-container {
+        transform: translateY(-1px);
+        @include mobile {
+          transform: translateY(-2px);
+        }
+      }
+
       //   стилизация выпадающего списка стран
       .iti--inline-dropdown .iti__dropdown-content {
         background-color: rgba(0, 0, 0, 1);
@@ -3619,8 +3633,9 @@ footer {
         background: transparent;
         border: none;
         color: white;
+        border-radius: 5px;
         option {
-          color: black;
+          background-color: black;
         }
       }
     }
