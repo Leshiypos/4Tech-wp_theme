@@ -767,6 +767,14 @@ header {
       }
     }
   }
+  @include mobile(440) {
+    .card {
+      .card_content {
+        width: calc(100% - 68px);
+        box-sizing: border-box;
+      }
+    }
+  }
 }
 
 // <----------------------------->

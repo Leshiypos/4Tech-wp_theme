@@ -104,6 +104,10 @@
         width: 33px;
       }
     }
+    &.read_more {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   @include desktop(1200) {
@@ -128,6 +132,10 @@
       img {
         width: 26px;
       }
+    }
+    &.read_more {
+      width: 100%;
+      max-width: 100%;
     }
   }
   @include mobile {
