@@ -1,6 +1,20 @@
 <?php
+/*
+ *
+Template name: Home
+Template post type: page
+ */
+?>
+
+<?php
 
 get_header();
+
+// Получаем ссылки на лендинги
+$it_services_url = get_permalink(pll_get_post(118));
+$office_equipmen_url = get_permalink(pll_get_post(65));
+$network_equipment_url = get_permalink(pll_get_post(104));
+$licensed_software_url = get_permalink(pll_get_post(84));
 ?>
 
 <main>
@@ -8,6 +22,16 @@ get_header();
 	<nav id="burger-menu" class="menu_mobile">
 		<div class="head_burger">
 			<img class="logo_burger" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo" />
+			<div class="lang_switcher">
+				<?php
+				$polylang_args = [
+					"dropdown" => 1,
+					"display_names_as" => "slug",
+					"id" => "lang_1"
+				];
+				pll_the_languages($polylang_args);
+				?>
+			</div>
 			<button class="close_menu" data-toggle-menu>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cross.svg" alt="Закрыть меню" />
 			</button>
@@ -16,37 +40,37 @@ get_header();
 			<div></div>
 			<ul class="burger__list">
 				<li class="burger__list-link">
-					<a href="/#about" data-link-burger>О нас</a>
+					<a href="/#about" data-link-burger><?php pll_e("О нас"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#services" data-link-burger>Услуги</a>
+					<a href="/#services" data-link-burger><?php pll_e("Услуги"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#soft" data-link-burger>Софт</a>
+					<a href="/#soft" data-link-burger><?php pll_e("Софт"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#equipment" data-link-burger>Оборудование</a>
+					<a href="/#equipment" data-link-burger><?php pll_e("Оборудование"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#protect" data-link-burger>Кибербезопасность</a>
+					<a href="/#protect" data-link-burger><?php pll_e("Кибербезопасность"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#outsourcing" data-link-burger>Аутсорсинг</a>
+					<a href="/#outsourcing" data-link-burger><?php pll_e("Аутсорсинг"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#solution" data-link-burger>Этапы</a>
+					<a href="/#solution" data-link-burger><?php pll_e("Этапы"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#development" data-link-burger>Разработка</a>
+					<a href="/#development" data-link-burger><?php pll_e("Разработка"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#partners" data-link-burger>Партнеры</a>
+					<a href="/#partners" data-link-burger><?php pll_e("Партнеры"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#solutions" data-link-burger>Решения</a>
+					<a href="/#solutions" data-link-burger><?php pll_e("Решения"); ?></a>
 				</li>
 				<li class="burger__list-link">
-					<a href="/#contacts" data-link-burger>Контакты</a>
+					<a href="/#contacts" data-link-burger><?php pll_e("Контакты"); ?></a>
 				</li>
 			</ul>
 
@@ -54,7 +78,7 @@ get_header();
 				<button
 					class="btn_hs leave_request mobile_full_width"
 					data-open-popup>
-					<p>Оставить заявку</p>
+					<p><?php pll_e("Оставить заявку"); ?></p>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 						alt="button" />
@@ -69,17 +93,17 @@ get_header();
 				<a href="#begin"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logo" /></a>
 				<nav>
 					<ul class="main_menu">
-						<li><a href="/#about">О нас</a></li>
-						<li><a href="/#services">Услуги</a></li>
-						<li><a href="/#soft">Софт</a></li>
-						<li><a href="/#equipment">Оборудование</a></li>
-						<li><a href="/#protect">Кибербезопасность</a></li>
-						<li><a href="/#outsourcing">Аутсорсинг</a></li>
-						<li><a href="/#solution">Этапы</a></li>
-						<li><a href="/#development">Разработка</a></li>
-						<li><a href="/#partners">Партнеры</a></li>
-						<li><a href="/#solutions">Решения</a></li>
-						<li><a href="/#contacts">Контакты</a></li>
+						<li><a href="/#about"><?php pll_e("О нас"); ?></a></li>
+						<li><a href="/#services"><?php pll_e("Услуги"); ?></a></li>
+						<li><a href="/#soft"><?php pll_e("Софт"); ?></a></li>
+						<li><a href="/#equipment"><?php pll_e("Оборудование"); ?></a></li>
+						<li><a href="/#protect"><?php pll_e("Кибербезопасность"); ?></a></li>
+						<li><a href="/#outsourcing"><?php pll_e("Аутсорсинг"); ?></a></li>
+						<li><a href="/#solution"><?php pll_e("Этапы"); ?></a></li>
+						<li><a href="/#development"><?php pll_e("Разработка"); ?></a></li>
+						<li><a href="/#partners"><?php pll_e("Партнеры"); ?></a></li>
+						<li><a href="/#solutions"><?php pll_e("Решения"); ?></a></li>
+						<li><a href="/#contacts"><?php pll_e("Контакты"); ?></a></li>
 					</ul>
 				</nav>
 				<div class="wrap_btns">
@@ -89,6 +113,7 @@ get_header();
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/burger_btn_desktop.svg"
 							alt="leave a request" /></a>
 					 */
+					pll_the_languages($polylang_args);
 					?>
 				</div>
 			</div>
@@ -132,26 +157,25 @@ get_header();
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check_mark.svg"
 							alt="check_mark" />
-						<span>От оборудования до облачных серверов — все в одном
-							месте</span>
+						<span><?php pll_e("От оборудования до облачных серверов — все в одном месте"); ?></span>
 					</div>
 				</div>
 				<h1>
-					Комплексные решение, для цифровой трансформации вашей компании
+					<?php pll_e("Комплексные решение, для цифровой трансформации вашей компании"); ?>
 				</h1>
 				<div class="pre_title_mob">
-					От оборудования до облачных серверов
+					<?php pll_e("От оборудования до облачных серверов"); ?>
 				</div>
 				<div class="foot_content two_col">
 					<div class="left_col">
 						<button class="btn_hs white" data-open-popup>
-							<p>Оставить заявку</p>
+							<p><?php pll_e("Оставить заявку"); ?></p>
 							<img
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_bl.svg"
 								alt="arrow in circle" />
 						</button>
 						<button class="btn_hs transporent" data-open-popup>
-							<p>Узнать больше</p>
+							<p><?php pll_e("Узнать больше"); ?></p>
 							<img
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_in_circle_w.svg"
 								alt="arrow in circle" />
@@ -184,8 +208,7 @@ get_header();
 			<div class="head_content">
 				<div class="title">
 					<h2 class="fade_in">
-						Ваш надежный поставщик<br />
-						IT решений
+						<?php pll_e("Ваш надежный поставщик<br />IT решений"); ?>
 					</h2>
 				</div>
 				<div class="description_wrap fade_in">
@@ -194,9 +217,7 @@ get_header();
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
 							alt="logo-section" />
 						<div class="description">
-							Мы предоставляем нашему рынку все необходимые инструменты для
-							оптимизаций и безопасности бизнес проектов: от IT оборудования
-							до облачных серверов
+							<?php pll_e("Мы предоставляем нашему рынку все необходимые инструменты для оптимизаций и безопасности бизнес проектов: от IT оборудования до облачных серверов"); ?>
 						</div>
 					</div>
 				</div>
@@ -205,32 +226,25 @@ get_header();
 				<div class="left_col">
 					<div class="two_col">
 						<div class="left_col">
-							<h3 class="fade_in">Внедряем технологии, которые работают</h3>
+							<h3 class="fade_in"><?php pll_e("Внедряем технологии, которые работают"); ?></h3>
 							<p class="fade_in">
-								Мы трансформируем ваш бизнес с помощью IT-решений:
-								автоматизируем процессы, ускоряем работу сотрудников и
-								минимизируем ошибки.
+								<?php pll_e("Мы трансформируем ваш бизнес с помощью IT-решений: автоматизируем процессы, ускоряем работу сотрудников и минимизируем ошибки."); ?>
 							</p>
 							<p class="fade_in">
-								Это не просто цифровизация — это рост эффективности и
-								снижение затрат с первого месяца.
+								<?php pll_e("Это не просто цифровизация — это рост эффективности и снижение затрат с первого месяца."); ?>
 							</p>
 						</div>
 						<div class="right_col our_mission">
 							<h3 class="fade_in">
-								Наша <br />
-								миссия
+								<?php pll_e("Наша <br />миссия"); ?>
 							</h3>
 							<p class="fade_in">
-								Повысить эффективность клиентов за счет улучшения
-								поддерживающей IT-инфраструктуры. Гарантией качественной
-								работы является опыт и квалификация сотрудников, а также
-								отличное знание всего спектра предлагаемых услуг и продукции
+								<?php pll_e("Повысить эффективность клиентов за счет улучшения поддерживающей IT-инфраструктуры. Гарантией качественной работы является опыт и квалификация сотрудников, а также	отличное знание всего спектра предлагаемых услуг и продукции"); ?>
 							</p>
 						</div>
 					</div>
 					<button class="btn_hs leave_request fade_in_fast" data-open-popup>
-						<p>Оставить заявку</p>
+						<p><?php pll_e("Оставить заявк"); ?>у</p>
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							alt="" />
@@ -271,23 +285,20 @@ get_header();
 		<div class="wrap_section">
 			<div class="column content">
 				<h2 class="fade_in">
-					Все в одном <br> месте - от ПО <br> до облачных <br> серверов
+					<?php pll_e("Все в одном <br> месте - от ПО <br> до облачных <br> серверов"); ?>
 				</h2>
 				<p class="fade_in">
-					У нас вы найдёте всё для построения эффективной IT-инфраструктуры:
-					лицензионное программное обеспечение, облачные решения, серверное
-					оборудование и техподдержку. Закрываем любые задачи — от простой
-					поставки до комплексных проектов "под ключ"
+					<?php pll_e('У нас вы найдёте всё для построения эффективной IT-инфраструктуры: лицензионное программное обеспечение, облачные решения, серверное оборудование и техподдержку. Закрываем любые задачи — от простой поставки до комплексных проектов "под ключ"'); ?>
 				</p>
 				<button class="btn_hs leave_request fade_in" data-open-popup>
-					<p>Узнать больше</p>
+					<p><?php pll_e("Узнать больше"); ?></p>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 						alt="button" />
 				</button>
 			</div>
 
-			<a href="/it-services" class="column card fade_in desktop">
+			<a href="<?php echo $it_services_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -298,14 +309,19 @@ get_header();
 					alt="components" />
 				<div class="card_content fade_in">
 					<h3>
-						IT <br />
-						услуги
+						<?php pll_e("IT <br />услуги"); ?>
 					</h3>
-					<p>Поддержка бизнесв 24/7 в любой точке мира</p>
+					<p><?php pll_e("Поддержка бизнесв 24/7 в любой точке мира"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
-			<a href="/office-equipment" class="column card fade_in desktop">
+			<a href="<?php echo $office_equipmen_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -316,14 +332,19 @@ get_header();
 					alt="components" />
 				<div class="card_content fade_in">
 					<h3>
-						Комьютеры <br />
-						и комплектующие
+						<?php pll_e("Комьютеры <br />и комплектующие"); ?>
 					</h3>
-					<p>Надёжная техника для стабильной работы вашей команды</p>
+					<p><?php pll_e("Надёжная техника для стабильной работы вашей команды"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
-			<a href="/network_equipment" class="column card fade_in desktop">
+			<a href="<?php echo $network_equipment_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -334,16 +355,21 @@ get_header();
 					alt="components" />
 				<div class="card_content fade_in">
 					<h3>
-						Серверное <br />
-						оборудование
+						<?php pll_e("Серверное <br />оборудование"); ?>
 					</h3>
 					<p>
-						Мощные решения для бесперебойной работы вашей инфраструктуры
+						<?php pll_e("Мощные решения для бесперебойной работы вашей инфраструктуры"); ?>
 					</p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
-			<a href="/licensed-software" class="column card fade_in desktop">
+			<a href="<?php echo $licensed_software_url; ?>" class="column card fade_in desktop">
 				<img
 					src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 					class="arrow_diag"
@@ -354,18 +380,24 @@ get_header();
 					alt="components" />
 				<div class="card_content fade_in">
 					<h3>
-						Системы хранения <br />
-						данных
+						<?php pll_e("Системы хранения <br />данных"); ?>
 					</h3>
-					<p>Безопасное и масштабируемое хранение ваших данных</p>
+					<p><?php pll_e("Безопасное и масштабируемое хранение ваших данных"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
+
 			</a>
 		</div>
 		<!-- начало слайдера -->
 		<div class="wrap_mobile">
 			<div class="swiper overyone_here_slider">
 				<div class="swiper-wrapper">
-					<a href="/it-services" class="swiper-slide card fade_in">
+					<a href="<?php echo $it_services_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -376,14 +408,19 @@ get_header();
 							alt="components" />
 						<div class="card_content fade_in">
 							<h3>
-								IT <br />
-								услуги
+								<?php pll_e("IT <br />услуги"); ?>
 							</h3>
-							<p>Поддержка бизнесв 24/7 в любой точке мира</p>
+							<p><?php pll_e("Поддержка бизнесв 24/7 в любой точке мира"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
-					<a href="/office-equipment" class="swiper-slide card fade_in">
+					<a href="<?php echo $office_equipmen_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -394,14 +431,19 @@ get_header();
 							alt="components" />
 						<div class="card_content fade_in">
 							<h3>
-								Комьютеры <br />
-								и комплектующие
+								<?php pll_e("Комьютеры <br />и комплектующие"); ?>
 							</h3>
-							<p>Надёжная техника для стабильной работы вашей команды</p>
+							<p><?php pll_e("Надёжная техника для стабильной работы вашей команды"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
-					<a href="/network_equipment" class="swiper-slide card fade_in">
+					<a href="<?php echo $network_equipment_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -412,16 +454,21 @@ get_header();
 							alt="components" />
 						<div class="card_content fade_in">
 							<h3>
-								Серверное <br />
-								оборудование
+								<?php pll_e("Серверное <br />оборудование"); ?>
 							</h3>
 							<p>
-								Мощные решения для бесперебойной работы вашей инфраструктуры
+								<?php pll_e("Мощные решения для бесперебойной работы вашей инфраструктуры"); ?>
 							</p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
-					<a href="/licensed-software" class="swiper-slide card fade_in">
+					<a href="<?php echo $licensed_software_url; ?>" class="swiper-slide card fade_in">
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							class="arrow_diag"
@@ -432,10 +479,15 @@ get_header();
 							alt="components" />
 						<div class="card_content fade_in">
 							<h3>
-								Системы хранения <br />
-								данных
+								<?php pll_e("Системы хранения <br />данных"); ?>
 							</h3>
-							<p>Безопасное и масштабируемое хранение ваших данных</p>
+							<p><?php pll_e("Безопасное и масштабируемое хранение ваших данных"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 				</div>
@@ -475,15 +527,13 @@ get_header();
 			<div class="wrap_content">
 				<div class="content_top">
 					<h2 class="fade_in">
-						Предоставляем лицензионное ПО <br />
-						для вашей компании
+						<?php pll_e("Предоставляем лицензионное ПО <br />для вашей компании"); ?>
 					</h2>
 					<div class="description fade_in">
-						4tech является авторизированным партнером международных
-						производителей программного обеспечения
+						<?php pll_e("4tech является авторизированным партнером международных производителей программного обеспечения"); ?>
 					</div>
 					<button class="btn_hs leave_request fade_in" data-open-popup>
-						<p>Оставить заявку</p>
+						<p><?php pll_e("Оставить заявку"); ?></p>
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							alt="button" />
@@ -543,7 +593,7 @@ get_header();
 		<div class="wrap_section">
 			<div class="head_content">
 				<div class="title fade_in">
-					<h2>каталог</h2>
+					<h2><?php pll_e("каталог"); ?></h2>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_title_catalog.svg"
 						alt="arrow title" />
@@ -554,9 +604,7 @@ get_header();
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
 							alt="logo-section" />
 						<div class="description">
-							Мы предоставляем нашему рынку все необходимые инструменты для
-							оптимизаций и безопасности бизнес проектов: от IT оборудования
-							до облачных серверов
+							<?php pll_e("Мы предоставляем нашему рынку все необходимые инструменты для оптимизаций и безопасности бизнес проектов: от IT оборудования до облачных серверов"); ?>
 						</div>
 					</div>
 				</div>
@@ -564,9 +612,9 @@ get_header();
 
 			<div class="row_catalog">
 				<div class="card text">
-					<h3 class="fade_in">Компьютерное оборудование и ноутбуки</h3>
+					<h3 class="fade_in"><?php pll_e("Компьютерное оборудование и ноутбуки"); ?></h3>
 					<p class="fade_in">
-						Надёжная техника для стабильной работы вашей команды
+						<?php pll_e("Надёжная техника для стабильной работы вашей команды"); ?>
 					</p>
 				</div>
 				<div class="card parent_cl_w mobile_visible">
@@ -621,18 +669,18 @@ get_header();
 						class="cover fade_in" />
 				</div>
 				<div class="card text">
-					<h3 class="fade_in">Серверное оборудование</h3>
+					<h3 class="fade_in"><?php pll_e("Серверное оборудование"); ?></h3>
 					<p class="fade_in">
-						Мощные решения для бесперебойной работы вашей инфраструктуры
+						<?php pll_e("Мощные решения для бесперебойной работы вашей инфраструктуры"); ?>
 					</p>
 				</div>
 			</div>
 
 			<div class="row_catalog">
 				<div class="card text">
-					<h3 class="fade_in">Системы хранения данных</h3>
+					<h3 class="fade_in"><?php pll_e("Системы хранения данных"); ?></h3>
 					<p class="fade_in">
-						Безопасное и масштабируемое хранения ваших данных
+						<?php pll_e("Безопасное и масштабируемое хранения ваших данных"); ?>
 					</p>
 				</div>
 				<div class="card mobile_visible">
@@ -675,13 +723,12 @@ get_header();
 						class="cover fade_in" />
 				</div>
 				<div class="card text">
-					<h3 class="small fade_in">Телекоммуникационное оборудование</h3>
+					<h3 class="small fade_in"><?php pll_e("Телекоммуникационное оборудование"); ?></h3>
 					<p class="fade_in">
-						Обеспечиваем стабильную и высокоскоростную связь для офиса,
-						дата-центра или распределённой инфраструктуры
+						<?php pll_e("Обеспечиваем стабильную и высокоскоростную связь для офиса, дата-центра или распределённой инфраструктуры"); ?>
 					</p>
 					<button class="btn_hs leave_request fade_in" data-open-popup>
-						<p>Смотреть больше</p>
+						<p><?php pll_e("Смотреть больше"); ?></p>
 						<img
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 							alt="button" />
@@ -692,7 +739,7 @@ get_header();
 				<button
 					class="btn_hs leave_request mobile_full_width fade_in"
 					data-open-popup>
-					<p>Смотреть больше</p>
+					<p><?php pll_e("Смотреть больше"); ?></p>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 						alt="button" />
@@ -726,18 +773,15 @@ get_header();
 
 			<div class="wrap_content">
 				<h2 class="fade_in">
-					Защищаем бизнес и данные <br />
-					от цифровых угроз
+					<?php pll_e("Защищаем бизнес и данные <br />от цифровых угроз"); ?>
 				</h2>
 				<p class="fade_in">
-					Обеспечиваем кибербезопасность на всех уровнях — от антивирусной
-					защиты рабочих станций до комплексных систем предотвращения атак и
-					утечек данных
+					<?php pll_e("Обеспечиваем кибербезопасность на всех уровнях — от антивирусной защиты рабочих станций до комплексных систем предотвращения атак и утечек данных"); ?>
 				</p>
 				<button
 					class="btn_hs leave_request mobile_full_width fade_in_fast"
 					data-open-popup>
-					<p>Оставить заявку</p>
+					<p><?php pll_e("Оставить заявку"); ?></p>
 					<img
 						src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 						alt="button" />
@@ -752,7 +796,7 @@ get_header();
 		<div class="wrap_section">
 			<div class="head_content">
 				<div class="title">
-					<h2 class="fade_in">IT аутсорсинг</h2>
+					<h2 class="fade_in"><?php pll_e("IT аутсорсинг"); ?></h2>
 				</div>
 				<div class="description_wrap fade_in">
 					<div class="wrap">
@@ -760,9 +804,7 @@ get_header();
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
 							alt="logo-section" />
 						<div class="description">
-							Берём на себя поддержку, обслуживание и администрирование —
-							<br />
-							чтобы вы фокусировались на бизнесе, а не на сбоях.
+							<?php pll_e("Берём на себя поддержку, обслуживание и администрирование —<br /> чтобы вы фокусировались на бизнесе, а не на сбоях."); ?>
 						</div>
 					</div>
 				</div>
@@ -778,12 +820,10 @@ get_header();
 						<div class="content">
 							<div class="wrap min_width">
 								<h3 class="fade_in">
-									техническая <br />
-									поддержка ПК
+									<?php pll_e("техническая <br />поддержка ПК"); ?>
 								</h3>
 								<p class="fade_in">
-									Обеспечиваем бесперебойную работу рабочих мест, оперативно
-									устраняем неполадки и обновляем системы.
+									<?php pll_e("Обеспечиваем бесперебойную работу рабочих мест, оперативно устраняем неполадки и обновляем системы."); ?>
 								</p>
 							</div>
 						</div>
@@ -807,12 +847,10 @@ get_header();
 						<div class="content">
 							<div class="wrap">
 								<h3 class="fade_in">
-									Тех. обслуживание <br />
-									серверного оборудования
+									<?php pll_e("Тех. обслуживание <br />серверного оборудования"); ?>
 								</h3>
 								<p class="fade_in long">
-									Следим за стабильной работой серверов: мониторим,
-									настраиваем и предотвращаем сбои до их возникновения.
+									<?php pll_e("Следим за стабильной работой серверов: мониторим, настраиваем и предотвращаем сбои до их возникновения."); ?>
 								</p>
 							</div>
 						</div>
@@ -832,12 +870,10 @@ get_header();
 						<div class="content">
 							<div class="wrap">
 								<h3 class="fade_in">
-									администрирование <br />
-									серверных приложений
+									<?php pll_e("администрирование <br />серверных приложений"); ?>
 								</h3>
 								<p class="fade_in long">
-									Настраиваем, обновляем и сопровождаем системное ПО, чтобы
-									ваши сервисы работали надёжно и без простоев.
+									<?php pll_e("Настраиваем, обновляем и сопровождаем системное ПО, чтобы ваши сервисы работали надёжно и без простоев."); ?>
 								</p>
 							</div>
 						</div>
@@ -859,8 +895,7 @@ get_header();
 			<div class="head_content">
 				<div class="title">
 					<h2 class="fade_in">
-						комплексное <br />
-						решение
+						<?php pll_e("комплексное <br />решение"); ?>
 					</h2>
 					<div class="four_steps">
 						<video
@@ -895,11 +930,7 @@ get_header();
 							src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_section.svg"
 							alt="logo-section" />
 						<div class="description">
-							Осуществляем решения «под ключ» для компаний. От изучения
-							задач
-							<br />
-							и проблем клиента, до подбора оборудования, поставки и
-							пусконаладки
+							<?php pll_e("Осуществляем решения «под ключ» для компаний. От изучения задач <br />и проблем клиента, до подбора оборудования, поставки и пусконаладки"); ?>
 						</div>
 					</div>
 				</div>
@@ -910,13 +941,10 @@ get_header();
 				<div class="solutions_desktop">
 					<div class="col text">
 						<h3 class="fade_in">
-							полный <br />
-							аудит
+							<?php pll_e("полный <br />аудит"); ?>
 						</h3>
 						<p class="fade_in">
-							Проводим глубокую оценку текущей IT-инфраструктуры, выявляем
-							технические и бизнес-проблемы, определяем зоны риска и
-							формируем основу для цифровой трансформации.
+							<?php pll_e("Проводим глубокую оценку текущей IT-инфраструктуры, выявляем	технические и бизнес-проблемы, определяем зоны риска и формируем основу для цифровой трансформации."); ?>
 						</p>
 					</div>
 					<div class="col img">
@@ -927,13 +955,10 @@ get_header();
 					</div>
 					<div class="col text">
 						<h3 class="fade_in">
-							создание <br />
-							концепции
+							<?php pll_e("создание <br />концепции"); ?>
 						</h3>
 						<p class="fade_in">
-							Разрабатываем стратегический план развития IT-системы под
-							задачи бизнеса: от архитектуры решений до оптимального набора
-							технологий и инструментов.
+							<?php pll_e("Разрабатываем стратегический план развития IT-системы под задачи бизнеса: от архитектуры решений до оптимального набора технологий и инструментов."); ?>
 						</p>
 					</div>
 					<div class="col img">
@@ -944,13 +969,10 @@ get_header();
 					</div>
 					<div class="col text">
 						<h3 class="fade_in">
-							обоснование <br />
-							внедрения IT
+							<?php pll_e("обоснование <br />внедрения IT"); ?>
 						</h3>
 						<p class="fade_in">
-							Готовим обоснование с расчётами эффективности, сроков и
-							бюджета внедрения. Согласовываем подходящие решения и
-							прогнозируем результат в цифрах.
+							<?php pll_e("Готовим обоснование с расчётами эффективности, сроков и бюджета внедрения. Согласовываем подходящие решения и прогнозируем результат в цифрах."); ?>
 						</p>
 					</div>
 					<div class="col img">
@@ -958,13 +980,10 @@ get_header();
 					</div>
 					<div class="col text">
 						<h3 class="fade_in">
-							внедрение <br />
-							технологии
+							<?php pll_e("внедрение <br />технологии"); ?>
 						</h3>
 						<p class="fade_in">
-							Внедряем технологии с учётом всех этапов — поставка,
-							настройка, интеграция, обучение и поддержка. Гарантируем
-							стабильную работу и измеримый эффект.
+							<?php pll_e("Внедряем технологии с учётом всех этапов — поставка,	настройка, интеграция, обучение и поддержка. Гарантируем стабильную работу и измеримый эффект."); ?>
 						</p>
 					</div>
 				</div>
@@ -977,9 +996,7 @@ get_header();
 								<div class="col text">
 									<h3 class="fade_in">полный аудит</h3>
 									<p class="fade_in">
-										Проводим глубокую оценку текущей IT-инфраструктуры,
-										выявляем технические и бизнес-проблемы, определяем зоны
-										риска и формируем основу для цифровой трансформации.
+										<?php pll_e("Проводим глубокую оценку текущей IT-инфраструктуры, выявляем технические и бизнес-проблемы, определяем зоны риска и формируем основу для цифровой трансформации."); ?>
 									</p>
 								</div>
 								<div class="col img">
@@ -993,11 +1010,9 @@ get_header();
 						<div class="swiper-slide">
 							<div class="two_column">
 								<div class="col text">
-									<h3 class="fade_in">создание концепции</h3>
+									<h3 class="fade_in"><?php pll_e("создание концепции"); ?></h3>
 									<p class="fade_in">
-										Разрабатываем стратегический план развития IT-системы
-										под задачи бизнеса: от архитектуры решений до
-										оптимального набора технологий и инструментов.
+										<?php pll_e("Разрабатываем стратегический план развития IT-системы под задачи бизнеса: от архитектуры решений до оптимального набора технологий и инструментов."); ?>
 									</p>
 								</div>
 								<div class="col img">
@@ -1011,11 +1026,9 @@ get_header();
 						<div class="swiper-slide fade_in">
 							<div class="two_column">
 								<div class="col text">
-									<h3 class="fade_in">обоснование внедрения IT</h3>
+									<h3 class="fade_in"><?php pll_e("обоснование внедрения IT"); ?></h3>
 									<p class="fade_in">
-										Готовим обоснование с расчётами эффективности, сроков и
-										бюджета внедрения. Согласовываем подходящие решения и
-										прогнозируем результат в цифрах.
+										<?php pll_e("Готовим обоснование с расчётами эффективности, сроков и бюджета внедрения. Согласовываем подходящие решения и прогнозируем результат в цифрах."); ?>
 									</p>
 								</div>
 								<div class="col img">
@@ -1029,11 +1042,9 @@ get_header();
 						<div class="swiper-slide">
 							<div class="two_column">
 								<div class="col text last">
-									<h3 class="fade_in">внедрение технологии</h3>
+									<h3 class="fade_in"><?php pll_e("внедрение технологии"); ?></h3>
 									<p class="fade_in">
-										Внедряем технологии с учётом всех этапов — поставка,
-										настройка, интеграция, обучение и поддержка. Гарантируем
-										стабильную работу и измеримый эффект.
+										<?php pll_e("Внедряем технологии с учётом всех этапов — поставка, настройка, интеграция, обучение и поддержка. Гарантируем стабильную работу и измеримый эффект."); ?>
 									</p>
 								</div>
 								<div class="col img">
@@ -1062,7 +1073,7 @@ get_header();
 
 			<div class="wrap_content">
 				<h2 class="fade_in">
-					Разрабатываем цифровые продукты и приложения
+					<?php pll_e("Разрабатываем цифровые продукты и приложения"); ?>
 				</h2>
 				<div class="our_stecs">
 					<div class="row">
@@ -1132,7 +1143,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>API-интеграции</h3>
+								<h3>API-<?php pll_e("интеграции"); ?></h3>
 								<p>PHP: Laravel, Lumen, Symfony, Cake PHP, Slim</p>
 							</div>
 						</div>
@@ -1142,8 +1153,8 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cheked_icon.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>UI/UX Дизайн</h3>
-								<p>Инструменты: Figma, Adobe XD, Sketch</p>
+								<h3>UI/UX <?php pll_e("Дизайн"); ?></h3>
+								<p><?php pll_e("Инструменты"); ?>: Figma, Adobe XD, Sketch</p>
 							</div>
 						</div>
 					</div>
@@ -1156,7 +1167,7 @@ get_header();
 		<!-- Секция Наши партнеры -->
 		<section class="partners_section">
 			<div class="wrap_section">
-				<h2 class="fade_in">Наши партнеры</h2>
+				<h2 class="fade_in"><?php pll_e("Наши партнеры"); ?></h2>
 				<div class="main_content">
 					<div class="swiper partners_slider fade_in">
 						<div class="swiper-wrapper">
@@ -1229,7 +1240,7 @@ get_header();
 		<!-- Секция Наши Клиенты -->
 		<section class="partners_section">
 			<div class="wrap_section">
-				<h2 class="fade_in">Наши Клиенты</h2>
+				<h2 class="fade_in"><?php pll_e("Наши Клиенты"); ?></h2>
 				<div class="main_content">
 					<div class="sliders_wrap">
 						<!-- Первый слайдер -->
@@ -1392,7 +1403,7 @@ get_header();
 
 			<div class="wrap_content">
 				<h2 class="fade_in">
-					Предлагаем IT решения для разных секторов экономики
+					<?php pll_e("Предлагаем IT решения для разных секторов экономики"); ?>
 				</h2>
 				<div class="our_stecs">
 					<div class="row">
@@ -1401,7 +1412,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_1.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>здравоохранение</h3>
+								<h3><?php pll_e("здравоохранение"); ?></h3>
 							</div>
 						</div>
 
@@ -1410,7 +1421,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_2.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>образование</h3>
+								<h3><?php pll_e("образование"); ?></h3>
 							</div>
 						</div>
 
@@ -1419,7 +1430,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_3.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>государственный сегмент</h3>
+								<h3><?php pll_e("государственный сегмент"); ?></h3>
 							</div>
 						</div>
 
@@ -1428,7 +1439,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_4.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>медицина</h3>
+								<h3><?php pll_e("медицина"); ?></h3>
 							</div>
 						</div>
 						<div class="card_stec fade_in">
@@ -1436,7 +1447,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_5.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>горнорудная промышленность</h3>
+								<h3><?php pll_e("горнорудная промышленность"); ?></h3>
 							</div>
 						</div>
 					</div>
@@ -1446,7 +1457,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_6.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>агропромышенный комплекс</h3>
+								<h3><?php pll_e("агропромышенный комплекс"); ?></h3>
 							</div>
 						</div>
 
@@ -1455,7 +1466,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_7.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>жилищно-коммунальные службы</h3>
+								<h3><?php pll_e("жилищно-коммунальные службы"); ?></h3>
 							</div>
 						</div>
 
@@ -1464,7 +1475,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_8.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>сотовые операторы</h3>
+								<h3><?php pll_e("сотовые операторы"); ?></h3>
 							</div>
 						</div>
 
@@ -1473,7 +1484,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_9.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>банковский сектор</h3>
+								<h3><?php pll_e("банковский сектор"); ?></h3>
 							</div>
 						</div>
 						<div class="card_stec fade_in">
@@ -1481,7 +1492,7 @@ get_header();
 								src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/it_solutions_icons_10.svg"
 								alt="adobe" />
 							<div class="content">
-								<h3>сфера услуг</h3>
+								<h3><?php pll_e("сфера услуг"); ?></h3>
 							</div>
 						</div>
 					</div>
@@ -1498,13 +1509,10 @@ get_header();
 				<div class="col">
 					<div class="head_content">
 						<h2 class="fade_in">
-							введите ваш номер <br />
-							телефона
+							<?php pll_e("введите ваш номер <br />телефона"); ?>
 						</h2>
 						<p class="description fade_in">
-							Оставьте заявку, и мы подберем решения, которые повысят
-							эффективность вашего бизнеса и сэкономят ресурсы за счет
-							автоматизации. Все — под ключ и без лишней головной боли.
+							<?php pll_e("Оставьте заявку, и мы подберем решения, которые повысят эффективность вашего бизнеса и сэкономят ресурсы за счет автоматизации. Все — под ключ и без лишней головной боли."); ?>
 						</p>
 					</div>
 					<div class="form_wrap">
@@ -1528,14 +1536,14 @@ get_header();
 										required />
 									<input type="hidden" name="phone_e164" id="phone_e164" />
 								</label>
-								<small id="phone_error" class="input-hint">Введите корректный номер</small>
+								<small id="phone_error" class="input-hint"><?php pll_e("Введите корректный номер"); ?></small>
 								<div id="form-message"></div>
 							</div>
 
 							<button
 								class="btn_hs leave_request fade_in mobile_full_width"
 								type="submit">
-								<p>Оставить заявку</p>
+								<p><?php pll_e("Оставить заявку"); ?></p>
 								<img
 									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
 									alt="button" />
@@ -1549,7 +1557,7 @@ get_header();
 							<div>
 								<div class="stat">11+</div>
 								<div class="description_stat">
-									Лет поставляем решения в сфере IT-технологий
+									<?php pll_e("Лет поставляем решения в сфере IT-технологий"); ?>
 								</div>
 							</div>
 						</div>
@@ -1557,7 +1565,7 @@ get_header();
 							<div>
 								<div class="stat">50+</div>
 								<div class="description_stat">
-									Компаний-партнеров, известных по всему миру
+									<?php pll_e("Компаний-партнеров, известных по всему миру"); ?>
 								</div>
 							</div>
 						</div>
@@ -1565,7 +1573,7 @@ get_header();
 							<div>
 								<div class="stat">70+</div>
 								<div class="description_stat">
-									Довольных и постоянных клиентов по всему миру
+									<?php pll_e("Довольных и постоянных клиентов по всему миру"); ?>
 								</div>
 							</div>
 						</div>

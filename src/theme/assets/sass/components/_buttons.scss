@@ -77,6 +77,10 @@
       display: none;
     }
   }
+  &.read_more {
+    width: 100%;
+    max-width: 100%;
+  }
   @include desktop(1600) {
     height: 50px;
     max-width: 200px;
@@ -150,6 +154,9 @@
         margin: 0;
         margin-left: 51px;
       }
+    }
+    &.read_more {
+      max-width: 300px;
     }
   }
   @include mobile(420) {

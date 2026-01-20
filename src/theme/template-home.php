@@ -312,6 +312,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 						<?php pll_e("IT <br />услуги"); ?>
 					</h3>
 					<p><?php pll_e("Поддержка бизнесв 24/7 в любой точке мира"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
@@ -329,6 +335,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 						<?php pll_e("Комьютеры <br />и комплектующие"); ?>
 					</h3>
 					<p><?php pll_e("Надёжная техника для стабильной работы вашей команды"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
@@ -348,6 +360,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 					<p>
 						<?php pll_e("Мощные решения для бесперебойной работы вашей инфраструктуры"); ?>
 					</p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
 			</a>
 
@@ -365,7 +383,14 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 						<?php pll_e("Системы хранения <br />данных"); ?>
 					</h3>
 					<p><?php pll_e("Безопасное и масштабируемое хранение ваших данных"); ?></p>
+					<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+						<p><?php pll_e("Подробнее"); ?></p>
+						<img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+							alt="button" />
+					</button>
 				</div>
+
 			</a>
 		</div>
 		<!-- начало слайдера -->
@@ -386,6 +411,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 								<?php pll_e("IT <br />услуги"); ?>
 							</h3>
 							<p><?php pll_e("Поддержка бизнесв 24/7 в любой точке мира"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
@@ -403,6 +434,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 								<?php pll_e("Комьютеры <br />и комплектующие"); ?>
 							</h3>
 							<p><?php pll_e("Надёжная техника для стабильной работы вашей команды"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
@@ -422,6 +459,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 							<p>
 								<?php pll_e("Мощные решения для бесперебойной работы вашей инфраструктуры"); ?>
 							</p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 
@@ -439,6 +482,12 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 								<?php pll_e("Системы хранения <br />данных"); ?>
 							</h3>
 							<p><?php pll_e("Безопасное и масштабируемое хранение ваших данных"); ?></p>
+							<button class="btn_hs leave_request fade_in read_more" style="margin-top:20px">
+								<p><?php pll_e("Подробнее"); ?></p>
+								<img
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow_diag_in_circle_W.svg"
+									alt="button" />
+							</button>
 						</div>
 					</a>
 				</div>

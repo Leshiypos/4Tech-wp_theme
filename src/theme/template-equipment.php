@@ -368,7 +368,7 @@ $licensed_software_url = get_permalink(pll_get_post(84));
 	if ($is_active_solution_second) {
 	?>
 
-		<section class="solutions_second_section first_section">
+		<section class="solutions_second_section first_section" id="solution">
 			<div class="wrap_section">
 				<div class="head_content">
 					<div class="title">

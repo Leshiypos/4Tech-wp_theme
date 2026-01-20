@@ -236,6 +236,9 @@ a {
     @media screen and (max-width: 1000px) {
       .btn_hs.just_img {
         display: none; } }
+  .btn_hs.read_more {
+    width: 100%;
+    max-width: 100%; }
   @media screen and (min-width: 1001px) and (max-width: 1600px) {
     .btn_hs {
       height: 50px;
@@ -293,7 +296,9 @@ a {
         .btn_hs.mobile_full_width p {
           width: 100%;
           margin: 0;
-          margin-left: 51px; } }
+          margin-left: 51px; }
+      .btn_hs.read_more {
+        max-width: 300px; } }
   @media screen and (max-width: 420px) {
     .btn_hs {
       min-width: 195px; } }
@@ -476,15 +481,13 @@ header .desktop {
       font-size: 14px;
       color: white;
       background: transparent;
-      border: none;
-      border-radius: 5px; }
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.3); }
       header .desktop .wrap_btns select option {
         font-size: 14px;
         background: transparent;
-        border: none;
         background-color: black;
-        border-radius: 10px;
-        border: none; }
+        border-radius: 10px; }
         header .desktop .wrap_btns select option:hover {
           background-color: #2b2b2b; }
 header .mobile {
@@ -807,15 +810,16 @@ header .mobile {
       margin: 35px;
       bottom: 0;
       left: 0;
-      z-index: 2;
-      max-width: 72%; }
+      z-index: 2; }
       .overyone_here_section .card .card_content p {
+        max-width: 95%;
         font-size: 14px;
         font-size: clamp(8px, calc( 8px + (14 - 8) * ((100vw - 1000px) / (1900 - 1000)) ), 14px);
         font-weight: 300;
         line-height: 1.8;
         letter-spacing: -0.03em; }
     .overyone_here_section .card h3 {
+      max-width: 95%;
       font-size: 24px;
       font-size: clamp(12px, calc( 12px + (24 - 12) * ((100vw - 1000px) / (1900 - 1000)) ), 24px);
       font-weight: 500;
@@ -854,9 +858,6 @@ header .mobile {
       .overyone_here_section .content p {
         margin-bottom: 28px; } }
   @media screen and (min-width: 1001px) and (max-width: 1400px) {
-    .overyone_here_section .card .card_content {
-      max-width: 75%; } }
-  @media screen and (min-width: 1001px) and (max-width: 1400px) {
     .overyone_here_section .content {
       width: 45%; } }
   @media screen and (max-width: 1000px) {
@@ -883,8 +884,7 @@ header .mobile {
         top: 23px;
         right: 20px; }
       .overyone_here_section .card .card_content {
-        margin: 28px 34px;
-        max-width: 250px; }
+        margin: 28px 34px; }
         .overyone_here_section .card .card_content p {
           font-size: 14px; }
       .overyone_here_section .card h3 {
@@ -898,8 +898,7 @@ header .mobile {
     .overyone_here_section .card h3 {
       font-size: 24px; }
     .overyone_here_section .card .card_content {
-      margin: 20px 23px;
-      max-width: 250px; }
+      margin: 20px 23px; }
     .overyone_here_section .column.content {
       width: 80%; } }
   @media screen and (max-width: 560px) {
@@ -2787,7 +2786,9 @@ footer {
       background: transparent;
       border: none;
       color: white;
-      border-radius: 5px; }
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0px 3px 3px 5px; }
       .menu_mobile .head_burger .lang_switcher select option {
         background-color: black; }
   .menu_mobile .wrap_content {

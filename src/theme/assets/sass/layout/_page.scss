@@ -84,15 +84,13 @@ header {
         font-size: 14px;
         color: white;
         background: transparent;
-        border: none;
         border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         option {
           font-size: 14px;
           background: transparent;
-          border: none;
           background-color: black;
           border-radius: 10px;
-          border: none;
           &:hover {
             background-color: rgb(43, 43, 43);
           }
@@ -606,8 +604,9 @@ header {
       bottom: 0;
       left: 0;
       z-index: 2;
-      max-width: 72%;
+      //   max-width: 72%;
       p {
+        max-width: 95%;
         font-size: 14px;
         @include fluid-font(8, 14);
         font-weight: 300;
@@ -616,6 +615,7 @@ header {
       }
     }
     h3 {
+      max-width: 95%;
       font-size: 24px;
       @include fluid-font(12, 24);
       font-weight: 500;
@@ -677,7 +677,7 @@ header {
   @include desktop(1400) {
     .card {
       .card_content {
-        max-width: 75%;
+        // max-width: 75%;
       }
     }
   }
@@ -718,13 +718,15 @@ header {
       }
       .card_content {
         margin: 28px 34px;
-        max-width: 250px;
+        // max-width: 250px;
         p {
           font-size: 14px;
+          //   max-width: 250px;
         }
       }
       h3 {
         font-size: 30px;
+        // max-width: 250px;
       }
     }
     .column {
@@ -742,7 +744,7 @@ header {
       }
       .card_content {
         margin: 20px 23px;
-        max-width: 250px;
+        // max-width: 250px;
       }
     }
     .column {
@@ -3634,6 +3636,8 @@ footer {
         border: none;
         color: white;
         border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 0px 3px 3px 5px;
         option {
           background-color: black;
         }
